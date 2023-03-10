@@ -1,2 +1,2 @@
-# INF206-2023-DY6-SADIS
+# INF206-2021-B-TimSADIS
 Proyek UAS Rekayasa Perangkat Lunak B
