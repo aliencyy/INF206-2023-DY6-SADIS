@@ -3,6 +3,8 @@
  namespace App\Http\Controllers;
   
  use Illuminate\Http\Request;
+ use Illuminate\Support\Facades\DB;
+
 //  use App\Models\Subjects;
   
  class PagesController extends Controller
@@ -19,6 +21,12 @@
   
          return view('user.penghasil.dashboard', [
          ]);
+     }
+
+     public function buang(){
+        return view('user.penghasil.buangsampah', [
+        
+        ]);
      }
  }
   

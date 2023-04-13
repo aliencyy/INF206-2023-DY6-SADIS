@@ -17,12 +17,10 @@ use App\Http\Controllers\PagesController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/dashboard', [PagesController::class, ('dashboard')]);
-
+Route::get('/buangsampah', [PagesController::class, ('buang')]);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 
