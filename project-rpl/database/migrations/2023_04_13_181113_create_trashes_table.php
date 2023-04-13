@@ -13,7 +13,7 @@
       */
      public function up(): void
      {
-         Schema::create('trash', function (Blueprint $table) {
+         Schema::create('trashes', function (Blueprint $table) {
              $table->id();
              $table->string('jenis_sampah')->nullable();
              $table->string('status_pengolahan')->nullable();

@@ -5,6 +5,8 @@
  use App\Http\Controllers\Controller;
  use Illuminate\Http\Request;
  use Illuminate\Support\Facades\DB;
+ use App\Models\Trash;
+
 
 //  use App\Models\Subjects;
   
@@ -37,9 +39,9 @@
             'jenis_pengolahan' => 'required',
         ]);
 
-        $id = DB::table('trash')->max('id');
+        $id = DB::table('trashes')->max('id');
 
-        DB::table('trash')->insert([
+        DB::table('trashes')->insert([
             'id' => $id + 1,
             'tanggal_pengambilan' => $request->tanggal_pengambilan,
             'jenis_sampah' => $request->jenis_sampah,
@@ -48,6 +50,14 @@
         ]);
 
         return redirect('/login');
+     }
+
+     public function order(){
+        $trash = Trash::all();
+
+        return view('user.pengolah.order', [
+            'trash' => $trash
+        ]);
      }
  }
   
