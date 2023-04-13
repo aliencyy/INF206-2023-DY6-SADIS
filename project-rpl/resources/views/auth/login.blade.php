@@ -26,13 +26,13 @@
                     <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
                         <form class="space-y-6" action="#" method="POST">
                             <div>
-                                <label for="NPM" class="block text-sm font-medium text-gray-700">
-                                    NPM
+                                <label for="email" class="block text-sm font-medium text-gray-700">
+                                    Email
                                 </label>
                                 <div class="mt-1">
-                                    <input id="npm" name="npm" required
+                                    <input id="email" name="email" required
                                         class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                                        placeholder="Silahkan masukkan NPM anda">
+                                        placeholder="Silahkan masukkan email anda">
                                 </div>
                             </div>
          
