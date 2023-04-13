@@ -21,7 +21,7 @@
      
      public function login(Request $request){
          $credential = $request->validate([
-             'npm' => 'required',
+             'email' => 'required',
              'password' => 'required'
          ]);
   
@@ -32,7 +32,7 @@
          }
          
         //  Alert::error('Error', 'NPM atau Password salah');
-         return back()->with('loginError', 'NPM atau Password salah');
+         return back()->with('loginError', 'Email atau Password salah');
   
  }
   
