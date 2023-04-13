@@ -13,15 +13,14 @@
       */
      public function up(): void
      {
-         Schema::create('subjects', function (Blueprint $table) {
+         Schema::create('trash', function (Blueprint $table) {
              $table->id();
-             $table->foreignId('jenis_sampah');
-             $table->string('status_pengolahan');
-             $table->string('jenis_pengolahan');
-             $table->string('berat');
-             $table->string('ket');
+             $table->string('jenis_sampah')->nullable();
+             $table->string('status_pengolahan')->nullable();
+             $table->string('jenis_pengolahan')->nullable();
+             $table->string('berat')->nullable();
+             $table->string('ket')->nullable();
              $table->date('tanggal_pengambilan');
-             $table->timestamps();
          });
      }
   
@@ -30,7 +29,7 @@
       */
      public function down(): void
      {
-         Schema::dropIfExists('subjects');
+         Schema::dropIfExists('trash');
      }
  };
   

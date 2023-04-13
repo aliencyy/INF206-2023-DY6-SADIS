@@ -27,3 +27,4 @@ Route::get('/login', [LoginController::class, 'index']);
 
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login']);
+Route::post('/buangsampah', [PagesController::class, 'storeBuang']);

@@ -2,6 +2,7 @@
  
  namespace App\Http\Controllers;
   
+ use App\Http\Controllers\Controller;
  use Illuminate\Http\Request;
  use Illuminate\Support\Facades\DB;
 
@@ -27,6 +28,26 @@
         return view('user.penghasil.buangsampah', [
         
         ]);
+     }
+
+     public function storeBuang(Request $request){
+        $request->validate([
+            'tanggal_pengambilan' => 'required',
+            'jenis_sampah' => 'required',
+            'jenis_pengolahan' => 'required',
+        ]);
+
+        $id = DB::table('trash')->max('id');
+
+        DB::table('trash')->insert([
+            'id' => $id + 1,
+            'tanggal_pengambilan' => $request->tanggal_pengambilan,
+            'jenis_sampah' => $request->jenis_sampah,
+            'jenis_pengolahan' => $request->jenis_pengolahan,
+
+        ]);
+
+        return redirect('/login');
      }
  }
   

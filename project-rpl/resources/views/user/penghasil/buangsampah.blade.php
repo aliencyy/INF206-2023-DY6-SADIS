@@ -24,35 +24,34 @@
          
                 <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                     <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-                        <form class="space-y-6" action="#" method="POST">
                             <div>
-                                <label for="tanggal" class="block text-sm font-medium text-gray-700">
-                                    tanggal Pembuangan
+                                <label for="tanggal_pengambilan" class="block text-sm font-medium text-gray-700">
+                                    tanggal pengambilan
                                 </label>
                                 <div class="mt-1">
-                                    <input id="tanggal" name="tanggal" type="date" required
+                                    <input id="tanggal_pengamb" name="tanggal_pengambilan" type="date" required
                                         class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                                         placeholder="Silahkan masukkan email anda">
                                 </div>
                             </div>
          
-                            <div>
+                            {{-- <div>
                                 <label for="nama" class="block text-sm font-medium text-gray-700">
                                     Nama Instansi
                                 </label>
                                 <div class="mt-1">
                                     <input id="nama" name="nama"
-                                        required
+                                        
                                         class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                                         placeholder="Masukkan Password Anda">
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <div>
 
                                 <div class="mt-1">
                                         <label class="my-1 mr-2" for="jenis_sampah">jenis sampah</label>
-                                        <select class="custom-select my-1 mr-sm-2" id="jenis_sampah">
+                                        <select class="custom-select my-1 mr-sm-2" id="jenis_sampah" name="jenis_sampah">
                                           <option selected>Choose...</option>
                                           <option value="Limbah infeksius">infeksius</option>
                                           <option value="Limbah radioaktif">radioaktif</option>
@@ -68,7 +67,7 @@
 
                                 <div class="mt-1">
                                         <label class="my-1 mr-2" for="jenis_pengolahan">Metode Pengolahan</label>
-                                        <select class="custom-select my-1 mr-sm-2" id="jenis_pengolahan">
+                                        <select class="custom-select my-1 mr-sm-2" id="jenis_pengolahan" name="jenis_pengolahan">
                                           <option selected>Choose...</option>
                                           <option value="Insinerator">Insinerator</option>
                                           <option value="autoclaving">autoclaving</option>
@@ -79,17 +78,17 @@
                                 </div>
                             </div>
 
-                            <div>
+                            {{-- <div>
                                 <label for="keterangan" class="block text-sm font-medium text-gray-700">
                                     keterangan tambahan
                                 </label>
                                 <div class="mt-1">
                                     <input id="ket" name="ket"
-                                        required
+                                        
                                         class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                                         placeholder="Keterangan Tambahan">
                                 </div>
-                            </div>
+                            </div> --}}
          
                             <!-- make button for login -->
                             <div>
