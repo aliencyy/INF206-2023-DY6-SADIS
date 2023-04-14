@@ -67,22 +67,23 @@ body {
 
         <h1 class="text-center">Menu Masuk</h1>
 
-        <form class="needs-validation">
+        <form class="needs-validation" action="/login" method="POST">
+            @csrf
             <div class="form-group was-validated">
-                <label class="form-label" for="email">ID</label>
-                <input class="form-control" type="name" id="name" placeholder="Masukkan ID" required>
+                <label class="form-label" for="email">EMAIL</label>
+                <input class="form-control" name="email" placeholder="Masukkan ID" required>
             </div>
             <div class="form-group was-validated">
                 <label class="form-label" for="password">Password</label>
-                <input class="form-control" type="password" id="password" placeholder="Masukkan password" required>
+                <input class="form-control" type="password" name="password" placeholder="Masukkan password" required>
             </div>
             <div class="form-group form-check">
                 <input class="form-check-input" type="checkbox" id="check">
                 <label class="form-check-label" for="check">Ingat saya</label>
             </div>
             <input class="btn btn-success w-100" type="submit" value="Masuk" style="margin-bottom: 20px;">
-            <input class="btn btn-success w-100" type="submit" value="Buat Akun">
         </form>
+        <input class="btn btn-success w-100" onclick="location.href='/register'" value="Buat Akun">
     </div>
     <!-- Akhir Menu Daftar -->
 
