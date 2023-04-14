@@ -59,6 +59,14 @@
             'trash' => $trash
         ]);
      }
+
+     public function orderan($id){
+        $new_order = Trash::where('id', $id)->first();
+
+        return view('user.pengolah.orderan',[
+            "orderan" => $new_order
+        ]);
+     }
  }
   
   
