@@ -24,6 +24,7 @@ Route::get('/buangsampah', [PagesController::class, ('buang')]);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/order',[PagesController::class, 'order']);
+Route::get('/order/{id}', [PagesController::class, 'orderan']);
 
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login']);
