@@ -2,19 +2,22 @@
 <html>
     <head>
         <title>Halaman Login</title>
-        <link rel="stylesheet" href="resources\css\style.css">
+        {{-- <link rel="stylesheet" href="resources\css\style.css"> --}}
     </head>
    
     <body>
         <div class="container">
           <h2>Login</h2>
-            <form>
-                <label>ID</label><br>
-                <input type="text"><br>
+          
+            <form action="/login" method="POST">
+                @csrf
+                <label>email</label><br>
+                <input name="email"><br>
                 <label>Password</label><br>
-                <input type="password"><br>
-                <button>Log in</button>
+                <input type="password" name="password"><br>
+                <button type="submit">Log in</button>
             </form>
+            <button onclick="location.href='/register'">register</button>
         </div>     
     </body>
 </html>
