@@ -1,1 +1,0 @@
-<h1>Ini adalah dashboard untuk akun penghasil sampah</h1>
