@@ -62,9 +62,8 @@
   
          ]);
   
-         
   
-         return redirect('/login');
+         return redirect('/login')->with('success', 'berhasil registrasi');
   
      }
   
