@@ -26,7 +26,7 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::get('/order',[PagesController::class, 'order']);
 Route::get('/order/{id}', [PagesController::class, 'orderan']);
 Route::get('/', function () {
-    return view('layouts.landing-page');
+    return view('index');
 });
 
 

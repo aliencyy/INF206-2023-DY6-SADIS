@@ -67,11 +67,17 @@ body {
 
         <h1 class="text-center">Menu Masuk</h1>
 
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
         <form class="needs-validation" action="/login" method="POST">
             @csrf
-            <div class="form-group was-validated">
+            <div class="form-group">
                 <label class="form-label" for="email">EMAIL</label>
-                <input class="form-control" name="email" placeholder="Masukkan ID" required>
+                <input name="email" class="form-control @error("email") is-invalid @enderror"  placeholder="Masukkan ID" required>
             </div>
             <div class="form-group was-validated">
                 <label class="form-label" for="password">Password</label>
