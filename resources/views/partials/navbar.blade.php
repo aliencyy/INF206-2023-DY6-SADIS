@@ -4,7 +4,7 @@
     <!-- Logo -->
     <div class="container" style= "background-color: #D9F9EE;">
       <a class="navbar-brand" href="#">
-        <img src="img/Logo-SADIS.png" alt="SADIS" width="102" height="95" >
+        <img src="{{ asset('img/Logo-SADIS.png') }}" alt="SADIS" width="102" height="95" >
         <span class="fs-2 fw-bold" style="color: #0E8DC9; margin-left: 10px; font-family: 'Inter', sans-serif;">SADIS</span>
       </a>
 
