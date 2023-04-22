@@ -34,7 +34,7 @@
       */
      public function store(Request $request)
      {
-         // store data registration to table user which is name,npm,password
+         // store data registration to table user which is name,email, lokasi, and password
          $request->validate([
              'name' => 'required',
              'email' => 'required',
@@ -46,7 +46,7 @@
          $id = DB::table('users')->max('id');
   
   
-         # Jika NPM sudah ada yang punya maka kita harus mencegahnya agar tidak bisa register
+         # Jika EMAIL sudah ada yang punya maka kita harus mencegahnya agar tidak bisa register
          if(DB::table('users')->where('email', $request->email)->exists()){
             //  Alert::error('Error', 'NPM udah ada yang punya oi');
              return redirect('/registerPage');

@@ -33,6 +33,8 @@
      }
 
      public function storeBuang(Request $request){
+
+
         $request->validate([
             'tanggal_pengambilan' => 'required',
             'jenis_sampah' => 'required',
@@ -41,6 +43,7 @@
 
         $id = DB::table('trashes')->max('id');
 
+        //memasukkan data ke table trashes sesusai dengan field yang diminta
         DB::table('trashes')->insert([
             'id' => $id + 1,
             'tanggal_pengambilan' => $request->tanggal_pengambilan,
@@ -60,6 +63,8 @@
         ]);
      }
 
+
+     //untuk menmpilkan data sesuai dengan yang di pilih oleh user
      public function orderan($id){
         $new_order = Trash::where('id', $id)->first();
 
