@@ -65,13 +65,13 @@ body {
     <!-- Menu Daftar -->
     <div class="daftar">
 
-        @if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-    @endif
-
         <h1 class="text-center">Menu Masuk</h1>
+
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
 
         <form class="needs-validation" action="/login" method="POST">
             @csrf
