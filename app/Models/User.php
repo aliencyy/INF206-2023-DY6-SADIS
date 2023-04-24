@@ -19,9 +19,11 @@ class User extends Authenticatable
      * relasi one to many
      */
  
-    public function sampah(){
-        return $this->hasMany(Trash::class);
+    public function Trash(){
+        return $this->hasMany(User::class);
     }
  
-    
+    public function subscriptions(){
+        return $this->hasOne(subscriptions::class);
+    }
 }

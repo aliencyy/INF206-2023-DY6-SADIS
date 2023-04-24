@@ -73,7 +73,13 @@
         ]);
      }
 
-    
+    public function langganan(){
+        return view('user.subscription');
+    }
+
+    public function perpanjanglangganan(){
+        return view('user.pricing');
+    }
  }
   
   

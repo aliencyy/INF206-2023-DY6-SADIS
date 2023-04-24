@@ -81,12 +81,9 @@
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>10 users included</li>
-              <li>2 GB of storage</li>
-              <li>Email support</li>
-              <li>Help center access</li>
+              <li>mingguan</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary" onclick="location.href='/bayar'">Sign up for free</button>
           </div>
         </div>
       </div>
@@ -98,10 +95,7 @@
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>20 users included</li>
-              <li>10 GB of storage</li>
-              <li>Priority email support</li>
-              <li>Help center access</li>
+              <li>bulanan</li>
             </ul>
             <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
           </div>
@@ -115,10 +109,7 @@
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>30 users included</li>
-              <li>15 GB of storage</li>
-              <li>Phone and email support</li>
-              <li>Help center access</li>
+              <li>tahunan</li>
             </ul>
             <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
           </div>

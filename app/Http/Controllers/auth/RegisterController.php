@@ -58,8 +58,7 @@
              'name' => $request->name,
              'email' => $request->email,
              'lokasi' => $request->lokasi,
-             'password' => Hash::make($request->password)
-  
+             'password' => Hash::make($request->password),
          ]);
   
   
