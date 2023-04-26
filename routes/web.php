@@ -37,6 +37,18 @@ Route::get('/', function () {
 
 Route::get('/bayar', function () {
 
+    try {
+
+    $data = DB::table('subscriptions')->select('langganan')->where('user_id', '=', Auth::user()->id)->first();
+    $currentDate = DateTime::createFromFormat('Y-m-d',$data->langganan) ;
+    $currentDate->add(new DateInterval('P1W'));
+
+    DB::table('subscriptions')
+        ->where('user_id', '=', Auth::user()->id)
+        ->update(['langganan' => $currentDate->format('Y-m-d')]);
+
+    } catch (Exception $e) {
+
     $id = DB::table('subscriptions')->max('id');
 
     $currentDate = now();
@@ -47,9 +59,10 @@ Route::get('/bayar', function () {
         'user_id' => Auth::user()->id,
         'langganan' => $currentDate,
     ]);
+    }
+
 
     $data = DB::table('subscriptions')->get();
-    dd($data);
     return view('user.pembayaran');
 });
 
