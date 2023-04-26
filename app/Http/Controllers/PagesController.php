@@ -6,7 +6,8 @@
  use Illuminate\Http\Request;
  use Illuminate\Support\Facades\DB;
  use App\Models\Trash;
-
+ use Illuminate\Support\Facades\Auth;
+ use Exception;
 
 //  use App\Models\Subjects;
   
@@ -74,7 +75,17 @@
      }
 
     public function langganan(){
-        return view('user.subscription');
+        
+        try{
+            $data = DB::table('subscriptions')->select('langganan')->where('user_id', '=', Auth::user()->id)->first();
+        $tanggal = $data->langganan;
+        } catch(Exception $e) {
+            $tanggal = 'Unactive';
+        }
+        
+        return view('user.subscription', [
+            'tanggal' => $tanggal
+        ]);
     }
 
     public function perpanjanglangganan(){

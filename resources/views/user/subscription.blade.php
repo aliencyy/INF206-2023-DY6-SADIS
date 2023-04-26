@@ -14,7 +14,7 @@
                     </form>
                 </div>
                 <div class="col-sm-6">
-                    <label for="tanggal-akhir">tanggal habis berlangganan :  </label>
+                    <label for="tanggal-akhir">tanggal habis berlangganan : {{ $tanggal }} </label>
                 </div>
             </div>
         </div>
