@@ -66,6 +66,11 @@ Route::get('/bayar', function () {
     return view('user.pembayaran');
 });
 
+
+Route::get('/s1', function() {
+    return view('user.penghasil.dashboard');
+});
+
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/buangsampah', [PagesController::class, 'storeBuang']);
