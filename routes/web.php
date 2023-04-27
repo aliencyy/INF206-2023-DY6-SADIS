@@ -33,7 +33,7 @@ Route::get('/pricing', [PagesController::class, 'perpanjanglangganan']);
 
 Route::get('/', function () {
     return view('index');
-});
+})->middleware('guest');
 
 Route::get('/bayar', function () {
 
@@ -63,7 +63,7 @@ Route::get('/bayar', function () {
 
 
     $data = DB::table('subscriptions')->get();
-    return view('user.pembayaran');
+    return redirect()->intended('langganan');
 });
 
 
