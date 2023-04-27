@@ -63,7 +63,7 @@ Route::get('/bayar', function () {
 
 
     $data = DB::table('subscriptions')->get();
-    return redirect()->intended('langganan');
+    return view('user.pembayaran');
 });
 
 

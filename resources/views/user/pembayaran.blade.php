@@ -1,15 +1,8 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
+
 @extends('layouts.app')
 @section('content')
 
-  <body>
+
     <link href="{{ asset('css/pembayaran.css') }}" rel="stylesheet">
     <form>
       <h2 class="tittle">Payment</h2>
@@ -43,6 +36,5 @@
 
       <input type="submit" value="Continue to checkout" style="font-size: 20px" />
     </form>
-  </body>
-</html>
+
 @endsection
