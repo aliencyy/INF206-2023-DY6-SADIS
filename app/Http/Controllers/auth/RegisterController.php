@@ -48,8 +48,8 @@
   
          # Jika EMAIL sudah ada yang punya maka kita harus mencegahnya agar tidak bisa register
          if(DB::table('users')->where('email', $request->email)->exists()){
-            //  Alert::error('Error', 'NPM udah ada yang punya oi');
-             return redirect('/registerPage');
+            Alert::error('Error', 'NPM udah ada yang punya oi');
+             return redirect('/register');
          }
   
          // store data to table user
