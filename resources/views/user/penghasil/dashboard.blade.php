@@ -6,7 +6,6 @@
   @endsection
  
  @section('content')
-    <h1>ini adalah view dashboard</h1>
 
   <!-- Isi dashboard penghasil -->
   <div class="container p-5" style="margin-top: 200px;">
