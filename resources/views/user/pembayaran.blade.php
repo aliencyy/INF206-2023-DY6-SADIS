@@ -1,24 +1,24 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
+
 @extends('layouts.app')
 @section('content')
 
-  <body>
-    <link href="{{ asset('css/pembayaran.css') }}" rel="stylesheet">
-    <form>
-      <h2 class="tittle">Payment</h2>
-      <div class="select-payment">
-        <label><input type="radio" name="payment" value="1" checked /> Credit card</label>
-        <label><input type="radio" name="payment" value="2" /> Debit card</label>
-        <label><input type="radio" name="payment" value="3" /> Paypal</label>
-      </div>
 
+    <link href="{{ asset('css/pembayaran.css') }}" rel="stylesheet">
+    <form class="needs-validation" action="/bayar" method="POST">
+    @csrf
+      <h2 class="tittle">Payment</h2>
+      <div style="display: flex; justify-content: space-between;">
+        <div class="select-payment">
+                <label><input type="radio" name="payment" value="Credit card" checked /> Credit card</label>
+                <label><input type="radio" name="payment" value="Debit card" /> Debit card</label>
+                <label><input type="radio" name="payment" value="Paypal" /> Paypal</label>
+            </div>
+            <div class="">
+              <input type="text" id="durasi" name="duration" value="{{ $duration }}" readonly style="background-color: #f0f0f0; color: #999;">
+            </div>
+        </div>
+    
+    
       <div class="inputan">
         <div>
           <label for="name">Name on card</label>
@@ -27,22 +27,21 @@
         </div>
         <div style="padding-left: 100px">
           <label for="credit">Credit card number</label>
-          <input class="anu" type="text" id="credit" name="credit" required />
+          <input class="anu" type="text" id="card_number" name="card_number" required />
         </div>
       </div>
       <div class="inputan" style="padding-bottom: 20px">
         <div>
           <label for="name">Expiration</label>
-          <input class="anu" type="text" id="name" name="name" required />
+          <input class="anu" type="text" id="expirations" name="expirations" required />
         </div>
         <div style="padding-left: 180px">
           <label for="number">CVV</label>
-          <input class="anu" type="text" id="number" name="number" required />
+          <input class="anu" type="text" id="CVV" name="CVV" required />
         </div>
       </div>
 
       <input type="submit" value="Continue to checkout" style="font-size: 20px" />
     </form>
-  </body>
-</html>
+
 @endsection

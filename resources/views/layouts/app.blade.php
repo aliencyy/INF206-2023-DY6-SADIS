@@ -17,6 +17,7 @@
 
   <body style="background-color: #D9F9EE" >
   {{-- <body style="background-color: #D9F9EE;"> --}}
+    @include('sweetalert::alert')
 
 
     @include('partials.navbar')
