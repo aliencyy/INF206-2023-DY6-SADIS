@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
+use App\Http\Controllers\IsAdminController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PaymentController;
 
@@ -34,6 +35,14 @@ Route::get('/langganan', [PagesController::class, 'langganan']);
 Route::get('/pricing', [PagesController::class, 'perpanjanglangganan']);
 Route::get('/bayar', [PaymentController::class, 'index']);
 
+Route::get('/tes/list', function(){
+    return view('user.pengolah.listCustomer');
+});
+
+Route::get('/tes/status', function(){
+    return view('user.pengolah.statuslangganan');
+});
+
 Route::get('/', function () {
     return view('index');
 })->middleware('guest');
@@ -52,3 +61,5 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::post('/buangsampah', [PagesController::class, 'storeBuang']);
 Route::post('/bayar', [PaymentController::class, 'storeData']);
 Route::post('/bayar/tipe', [PaymentController::class, 'index']);
+
+route::resource('/dashboard/tes', IsAdminController::class)->middleware(('admin'));

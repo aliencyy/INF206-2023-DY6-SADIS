@@ -61,12 +61,9 @@ class PaymentController extends Controller
     public function updateDate($duration){
         try {
 
-
-
             $data = DB::table('subscriptions')->select('langganan')->where('user_id', '=', Auth::user()->id)->first();
             $currentDate = DateTime::createFromFormat('Y-m-d',$data->langganan) ;
       
-
             if($duration =='mingguan') {
                 $currentDate->add(new DateInterval('P1W'));
             } elseif($duration == 'bulanan') {
@@ -84,7 +81,13 @@ class PaymentController extends Controller
             $id = DB::table('subscriptions')->max('id');
         
             $currentDate = now();
-            $currentDate->add(new DateInterval('P1W'));
+            if($duration =='mingguan') {
+                $currentDate->add(new DateInterval('P1W'));
+            } elseif($duration == 'bulanan') {
+                $currentDate->add(new DateInterval('P1M'));
+            } elseif($duration == 'tahunan') {
+                $currentDate->add(new DateInterval('P1Y'));
+            }
         
             DB::table('subscriptions')->insert([
                 'id' =>  $id + 1,
