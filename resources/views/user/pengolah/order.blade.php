@@ -18,7 +18,17 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $d->user->email ?? 'No user associated' }}</td>
                     <td>{{ $d->tanggal_pengambilan }}</td>
-                    <td>{{ $d->status_pengolahan }}</td>
+                    <td>                    
+                        <div class="mt-1">
+                            <form action="">
+                                <select class="custom-select my-1 mr-sm-2" id="jenis_sampah" name="jenis_sampah" style="background-color: #EBF6F1;" >
+                                <option value="Limbah infeksius">Pengangkutan</option>
+                                <option value="Limbah radioaktif">Pengolahan</option>
+                                <option value="Limbah benda tajam">Selesai</option>
+                                </select>
+                            </form>
+                         </div>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

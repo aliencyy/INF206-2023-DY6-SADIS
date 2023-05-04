@@ -3,7 +3,8 @@
  namespace App\Http\Controllers;
   
  use App\Http\Controllers\Controller;
- use Illuminate\Http\Request;
+use App\Models\Subscriptions;
+use Illuminate\Http\Request;
  use Illuminate\Support\Facades\DB;
  use App\Models\Trash;
 use App\Models\User;
@@ -107,6 +108,15 @@ use Illuminate\Support\Facades\Auth;
 
     public function perpanjanglangganan(){
         return view('user.penghasil.pricing');
+    }
+
+    public function listSubscriptions(){
+        // $user_id = Auth::id();
+        $subs = Subscriptions::with('user')->get();
+            
+        return view('user.pengolah.listCustomer', [
+            'subs' => $subs
+        ]);
     }
  }
   
