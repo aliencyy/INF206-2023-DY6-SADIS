@@ -21,7 +21,7 @@
         
         @endauth
 
-        <button type="button" class="btn btn-primary rounded-5 border-0 mx-3"  style="background-color: #A3D8BF; -webkit-text-fill-color: black; --bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: 1.25rem;">Mitra</button>
+        <button onclick="location.href='/mitra'" type="button" class="btn btn-primary rounded-5 border-0 mx-3"  style="background-color: #A3D8BF; -webkit-text-fill-color: black; --bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: 1.25rem;">Mitra</button>
         <button type="button" class="btn btn-primary rounded-5 border-0 "  style="background-color: #A3D8BF; -webkit-text-fill-color: black; --bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: 1.25rem;">About Us</button>
       </div>
     </div>
