@@ -34,6 +34,7 @@
       */
      public function store(Request $request)
      {
+
          // store data registration to table user which is name,email, lokasi, and password
          $request->validate([
              'name' => 'required',

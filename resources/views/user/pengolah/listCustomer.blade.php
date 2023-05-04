@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+{{-- 
 <!-- Navbar -->
 <nav class="navbar m-0 p-0 fixed-top">
     <!-- Left Navbar -->
@@ -19,7 +19,7 @@
                 User</a>
         </div>
 </nav>
-<!-- End Navbar -->
+<!-- End Navbar --> --}}
 
 <!-- Content -->
 <div class="container" style="margin-top: 140px;">
@@ -68,3 +68,5 @@
         </div>
     </div>
 </div>
+
+@endsection
