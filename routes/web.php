@@ -34,7 +34,7 @@ Route::get('logout', [LoginController::class, 'destroy']);
 Route::get('/langganan', [PagesController::class, 'langganan'])->middleware('auth');
 Route::get('/pricing', [PagesController::class, 'perpanjanglangganan'])->middleware('auth');
 Route::get('/bayar', [PaymentController::class, 'index'])->middleware('auth');
-Route::get('/listSubscriptor', [PagesController::class, 'listSubscriptions'])->middleware('auth');
+    Route::get('/listSubscriptor', [PagesController::class, 'listSubscriptions'])->middleware('admin')->middleware('overdue');
 
 Route::get('/tes/status', function(){
     return view('user.pengolah.statuslangganan');
@@ -55,7 +55,7 @@ Route::get('/mitra', function() {
 
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login']);
-Route::post('/buangsampah', [PagesController::class, 'storeBuang']);
+Route::post('/buangsampah', [PagesController::class, 'storeBuang'])->middleware('overdue'); 
 Route::post('/bayar', [PaymentController::class, 'storeData']);
 Route::post('/bayar/tipe', [PaymentController::class, 'index']);
 
