@@ -59,7 +59,7 @@ style="background-color: #D9F9EE"
             <div class="col-md-12">
                 <div class="d-flex justify-content-end">
                     <form action="/pricing" method="GET">
-                    <button class="btn rounded-4 me-3" style="background-color: rgba(116, 145, 250, 0.81);">Perpanjang</button>
+                    <button class="btn rounded-4 me-3" style="background-color: #A3D8BF;">Perpanjang</button>
                     </form>
                     <button class="btn rounded-4 ml-auto me-5" style="background-color: rgba(250, 59, 59, 0.74);">Batalkan</button>
                 </div>
