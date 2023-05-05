@@ -27,7 +27,7 @@ style="background-color: #D9F9EE"
 <!-- End Navbar --> --}}
 
 <!-- Content -->
-<div class="container" style="margin-top: 140px;">
+<div class="container mt-4">
     <div class="row">
         <div class="col-md-12">
             <h3 class="text-center mb-4">Langganan</h3>
