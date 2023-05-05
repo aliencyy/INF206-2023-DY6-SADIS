@@ -4,7 +4,7 @@
 
 
     <link href="{{ asset('css/pembayaran.css') }}" rel="stylesheet">
-    <form class="needs-validation" action="/bayar" method="POST">
+    <form class="needs-validation mb-5" action="/bayar" method="POST">
     @csrf
       <h2 class="tittle">Payment</h2>
       <div style="display: flex; justify-content: space-between;">
