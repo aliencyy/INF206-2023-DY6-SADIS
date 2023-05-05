@@ -29,7 +29,7 @@ style="background-color: #D9F9EE"
 <!-- End Navbar --> --}}
 
 <!-- Content -->
-<div class="container w-80 p-3 rounded-4" style="background-color: #EBEBEB; height: 400px; margin-top: 150px;">
+<div class="container w-80 p-3 rounded-4" style="background-color: #BFE4D3; height: 400px; margin-top: 150px;">
     <div class="row">
         {{-- <div class="col m-5 fs-5">Jenis Langganan
             <span class="ms-4"><input type="text" placeholder="bulanan"></span>
@@ -59,7 +59,7 @@ style="background-color: #D9F9EE"
             <div class="col-md-12">
                 <div class="d-flex justify-content-end">
                     <form action="/pricing" method="GET">
-                    <button class="btn rounded-4 me-3" style="background-color: rgba(116, 145, 250, 0.81);">Perpanjang</button>
+                    <button class="btn rounded-4 me-3" style="background-color: #A3D8BF;">Perpanjang</button>
                     </form>
                     <button class="btn rounded-4 ml-auto me-5" style="background-color: rgba(250, 59, 59, 0.74);">Batalkan</button>
                 </div>
