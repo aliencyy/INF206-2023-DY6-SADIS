@@ -4,7 +4,7 @@
 
 
     <link href="{{ asset('css/pembayaran.css') }}" rel="stylesheet">
-    <form class="needs-validation" action="/bayar" method="POST">
+    <form class="needs-validation mb-5" action="/bayar" method="POST">
     @csrf
       <h2 class="tittle">Payment</h2>
       <div style="display: flex; justify-content: space-between;">
@@ -14,7 +14,7 @@
                 <label><input type="radio" name="payment" value="Paypal" /> Paypal</label>
             </div>
             <div class="">
-              <input type="text" id="durasi" name="duration" value="{{ $duration }}" readonly style="background-color: #f0f0f0; color: #999;">
+              <input type="text" id="durasi" name="duration" value="{{ $duration }}" readonly style="background-color: #A3D8BF; color: #999;">
             </div>
         </div>
     
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <input type="submit" value="Continue to checkout" style="font-size: 20px" />
+      <input type="submit" value="Continue to checkout" style="background-color: #A3D8BF; font-size: 20px" />
     </form>
 
 @endsection
