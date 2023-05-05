@@ -16,11 +16,15 @@
          Schema::create('trashes', function (Blueprint $table) {
              $table->id();
              $table->string('jenis_sampah')->nullable();
+             $table->unsignedBigInteger('user_id');
              $table->string('status_pengolahan')->nullable();
              $table->string('jenis_pengolahan')->nullable();
              $table->string('berat')->nullable();
              $table->string('ket')->nullable();
              $table->date('tanggal_pengambilan');
+
+             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
          });
      }
   
