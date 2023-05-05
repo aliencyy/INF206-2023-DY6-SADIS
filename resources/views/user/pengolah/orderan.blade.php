@@ -4,7 +4,6 @@
 <div class="card-body">
     <table class="table table-sm table-bordered table-striped">
         <thead>
-            <th>No</th>
             <th>tangal penjemputan</th>
             <th>jenis_sampah</th>
             <th>jenis_pengolahan</th>
@@ -16,7 +15,6 @@
         <tbody>
             
                 <tr>
-                    <td>{{ $orderan->id }}</td>
                     <td>{{ $orderan->tanggal_pengambilan }}</td>
                     <td>{{ $orderan->jenis_sampah }}</td>
                     <td>{{ $orderan->jenis_pengolahan }}</td>
