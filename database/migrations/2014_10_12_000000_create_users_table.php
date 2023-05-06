@@ -14,8 +14,9 @@
      {
          Schema::create('users', function (Blueprint $table) {
              $table->id();
+             $table->string('Id_akun')->fixedLength(8);
              $table->string('name');
-             $table->string('email')->unique();
+             $table->string('email')->unique()->nullable('false')->change();
              $table->string('password');
              $table->string('lokasi');
              $table->string('role')->default('user');
