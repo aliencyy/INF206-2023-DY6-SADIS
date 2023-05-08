@@ -21,8 +21,10 @@ class IsAdmin
             abort(403);
         }
         if(Auth::user()->role !== 'admin'){
-             abort(403);
-        
+
+            
+            abort(403);
+
         }
         return $next($request);
     }
