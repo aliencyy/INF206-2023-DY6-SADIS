@@ -64,6 +64,4 @@ Route::post('/bayar/tipe', [PaymentController::class, 'index']);
 route::resource('/dashboard/tes', IsAdminController::class)->middleware(('admin'));
 
 
-Route::post('/aaa', function(Request $request) {
-    dd($request->all());    
-});
+Route::post('/aaa', [PagesController::class, 'storeStatus']);

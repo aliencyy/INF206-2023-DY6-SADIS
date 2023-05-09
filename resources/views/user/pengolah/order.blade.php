@@ -16,8 +16,7 @@
                     <th>No</th>
                     <th>Email</th>
                     <th>Tanggal Pengambilan</th>
-                    <th>Status</th>
-                    <th>Action</th>
+                    <th class="border-0">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,9 +25,9 @@
                         <td onclick="location.href='/order/{{ $d->id }}'">{{ $loop->iteration }}</td>
                         <td onclick="location.href='/order/{{ $d->id }}'">{{ $d->user->email ?? 'No user associated' }}</td>
                         <td onclick="location.href='/order/{{ $d->id }}'">{{ $d->tanggal_pengambilan }}</td>
-                        <td onclick="location.href='/order/{{ $d->id }}'" style="width: 25%">{{ $d->status }}</td>
+                        <td onclick="location.href='/order/{{ $d->id }}'" style="width: 25%" class="border-0">{{ $d->status_pengolahan }}</td>
                         <td class="p-0 border-0" style="width: 0%;">
-                            <div class="position-relative px-1">
+                            <div class="position-relative ">
                                 <button class="btn btn-primary btn-block" id="dropdown-btn-{{ $loop->iteration }}">ubah</button>
                                 <ul class="dropdown-menu position-absolute d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px d-none" id="dropdown-menu-{{ $loop->iteration }}" data-bs-theme="light"">
                                     <form action="/aaa" method="POST" id="form-{{ $loop->iteration }}">
@@ -37,7 +36,7 @@
                                         <input type="hidden" name="id" id="id-{{ $loop->iteration }}" value="{{ $d->id }}">
                                         <input type="hidden" name="email" id="email-{{ $loop->iteration }}" value="{{ $d->user->email ?? '' }}">
                                     </form>
-                                    <li><a class="dropdown-item rounded-2 active" href="#" onclick="setStatus({{ $loop->iteration }}, '{{ $d->user->email ?? '' }}', 'Pengangkutan')">Pengangkutan</a></li>
+                                    <li><a class="dropdown-item rounded-2 " href="#" onclick="setStatus({{ $loop->iteration }}, '{{ $d->user->email ?? '' }}', 'Pengangkutan')">Pengangkutan</a></li>
                                     <li><a class="dropdown-item rounded-2" href="#" onclick="setStatus({{ $loop->iteration }}, '{{ $d->user->email ?? '' }}', 'Pengolahan')">Pengolahan</a></li>
                                     <li><a class="dropdown-item rounded-2" href="#" onclick="setStatus({{ $loop->iteration }}, '{{ $d->user->email ?? '' }}', 'Selesai')">Selesai</a></li>
                                 </ul>

@@ -118,6 +118,15 @@ use Illuminate\Support\Facades\Auth;
             'subs' => $subs
         ]);
     }
+
+    public function storeStatus(Request $request){
+        $data = $request;
+        DB::table('trashes')
+            ->where('id', '=', $data->id)
+            ->update(['status_pengolahan' => $data->status]);
+
+        return redirect('order');
+    }
  }
   
   
