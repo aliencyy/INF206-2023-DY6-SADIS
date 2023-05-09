@@ -63,7 +63,7 @@ use Illuminate\Support\Facades\Auth;
         $user_id = Auth::id();
         if (Auth::user()->role == 'admin'){
         $trash = Trash::with('user')->get();
-            
+
         return view('user.pengolah.order', [
             'trash' => $trash
         ]);
@@ -82,7 +82,7 @@ use Illuminate\Support\Facades\Auth;
 
      //untuk menmpilkan data sesuai dengan yang di pilih oleh user
      public function orderan($id){
-        $new_order = Trash::where('id', $id)->first();
+        $new_order = Trash::with('user')->where('id', $id)->first();
 
         return view('user.tesDetailCOntent',[
             "orderan" => $new_order

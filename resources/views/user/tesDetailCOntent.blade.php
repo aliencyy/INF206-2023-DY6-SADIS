@@ -21,9 +21,9 @@
         <!-- Todo list section -->
         <div class="row mx-5 px-5 pb-3 w-80">
             <div class="col mx-auto">
-                <!-- Todo Item 1 -->
+                 <!-- Todo Item 1 -->
+
                 <div class="row px-3 align-items-center todo-item rounded ">
-                    
                     <div class="col px-1 m-1 d-flex align-items-center">
                         <input type="text" class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3" readonly value="Tanggal penjemputan" />
                     </div>
@@ -42,6 +42,28 @@
                         </div>
                     </div>
                 </div>
+                @can ('admin')
+                    <div class="row px-3 align-items-center todo-item rounded ">
+                        <div class="col px-1 m-1 d-flex align-items-center">
+                            <input type="text" class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3" readonly value="Pembuang" />
+                        </div>
+                        <div class="col-auto m-1 p-0 px-3 d-none">
+                        </div>
+                        <div class="col-auto m-1 p-0 ">
+                            <div class="row d-flex align-items-center justify-content-end">
+                                <div class="p-1 h1 text-primary text-center mx-auto display-inline-block">
+                                    <input type="text" class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3" readonly value="{{ $orderan->user->email}}" />
+                                </div>
+                            </div>
+                            <div class="row todo-created-info">
+                                <div class="col-auto d-flex align-items-center pr-2">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endcan
+
                 <!-- Todo Item 2 -->
                 <div class="row px-3 align-items-center todo-item rounded">
                     

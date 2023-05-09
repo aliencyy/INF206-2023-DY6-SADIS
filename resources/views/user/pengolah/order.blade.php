@@ -7,49 +7,102 @@
 <div class="card-body">
 
     @can('admin')
-    <div style="display: flex;">
+    <div>
 
-    <table class="table table-sm table-bordered table-striped">
-        <thead>
-            <th>No</th>
-            <th>Pembuang</th>
-            <th>tangal penjemputan</th>
-            <th class="border-0">Status</th>
+    <div class="table-responsive" style="overflow: visible;">
+        <table class="table table-sm table-bordered table-striped table-hover ">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Email</th>
+                    <th>Tanggal Pengambilan</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($trash as $d)
+                    <tr>
+                        <td onclick="location.href='/order/{{ $d->id }}'">{{ $loop->iteration }}</td>
+                        <td onclick="location.href='/order/{{ $d->id }}'">{{ $d->user->email ?? 'No user associated' }}</td>
+                        <td onclick="location.href='/order/{{ $d->id }}'">{{ $d->tanggal_pengambilan }}</td>
+                        <td onclick="location.href='/order/{{ $d->id }}'" style="width: 25%">{{ $d->status }}</td>
+                        <td class="p-0 border-0" style="width: 0%;">
+                            <div class="position-relative px-1">
+                                <button class="btn btn-primary btn-block" id="dropdown-btn-{{ $loop->iteration }}">ubah</button>
+                                <ul class="dropdown-menu position-absolute d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px d-none" id="dropdown-menu-{{ $loop->iteration }}" data-bs-theme="light"">
+                                    <form action="/aaa" method="POST" id="form-{{ $loop->iteration }}">
+                                        @csrf
+                                        <input type="hidden" name="status" id="status-{{ $loop->iteration }}" value="">
+                                        <input type="hidden" name="id" id="id-{{ $loop->iteration }}" value="{{ $d->id }}">
+                                        <input type="hidden" name="email" id="email-{{ $loop->iteration }}" value="{{ $d->user->email ?? '' }}">
+                                    </form>
+                                    <li><a class="dropdown-item rounded-2 active" href="#" onclick="setStatus({{ $loop->iteration }}, '{{ $d->user->email ?? '' }}', 'Pengangkutan')">Pengangkutan</a></li>
+                                    <li><a class="dropdown-item rounded-2" href="#" onclick="setStatus({{ $loop->iteration }}, '{{ $d->user->email ?? '' }}', 'Pengolahan')">Pengolahan</a></li>
+                                    <li><a class="dropdown-item rounded-2" href="#" onclick="setStatus({{ $loop->iteration }}, '{{ $d->user->email ?? '' }}', 'Selesai')">Selesai</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
             
-        </thead>
+            
+            
+        </table>
+    </div>
     
-        <tbody>
-            @foreach ($trash as $d)
-            <tr>
-                <td>{{ $loop->iteration }}</td>
-                <td>{{ $d->user->email ?? 'No user associated' }}</td>
-                <td>{{ $d->tanggal_pengambilan }}</td>
-                <td>{{ $d->status }}</td>
-                <td class="p-0 border-0" style="width: 60px;">
-                    <div class="position-relative px-1">
-                        <button class="btn btn-primary" id="dropdown-btn">ubah</button>
-                        <ul class="dropdown-menu position-absolute d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px d-none" id="dropdown-menu" data-bs-theme="light">
-                            <li><a class="dropdown-item rounded-2 active" href="#">Action</a></li>
-                            <li><a class="dropdown-item rounded-2" href="#">Another action</a></li>
-                            <li><a class="dropdown-item rounded-2" href="#">Something else here</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item rounded-2" href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-        
-        <script>
-            const dropdownBtn = document.querySelector('#dropdown-btn');
-            const dropdownMenu = document.querySelector('#dropdown-menu');
-        
-            dropdownBtn.addEventListener('click', () => {
-                dropdownMenu.classList.toggle('d-none');
-            });
-        </script>
-    </table>
+            
+            
+            <script>
+                const dropdownBtns = document.querySelectorAll('[id^="dropdown-btn-"]');
+                const dropdownMenus = document.querySelectorAll('[id^="dropdown-menu-"]');
+                
+                dropdownBtns.forEach((btn, i) => {
+                    btn.addEventListener('click', () => {
+                        // hide all other dropdowns
+                        dropdownMenus.forEach((menu) => {
+                            if (menu !== dropdownMenus[i]) {
+                                menu.classList.add('d-none');
+                            }
+                        });
+                        // toggle the clicked dropdown
+                        dropdownMenus[i].classList.toggle('d-none');
+                    });
+                });
+            
+                document.addEventListener('click', (event) => {
+                    let isClickInsideDropdown = false;
+                    dropdownMenus.forEach((menu) => {
+                        if (menu.contains(event.target)) {
+                            isClickInsideDropdown = true;
+                        }
+                    });
+            
+                    dropdownBtns.forEach((btn) => {
+                        if (btn.contains(event.target)) {
+                            isClickInsideDropdown = true;
+                        }
+                    });
+            
+                    if (!isClickInsideDropdown) {
+                        dropdownMenus.forEach((menu) => {
+                            menu.classList.add('d-none');
+                        });
+                    }
+                });
+            
+                function setStatus(iteration, email, status) {
+                    var form = document.getElementById('form-' + iteration);
+                    form.querySelector('#status-' + iteration).value = status;
+                    form.querySelector('#email-' + iteration).value = email;
+                    form.submit();
+                }
+            
+            </script>
+            
+
+    
 
 
 

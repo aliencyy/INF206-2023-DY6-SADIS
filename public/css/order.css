@@ -12,3 +12,18 @@
   td.no-border {
     border: none;
 }
+.dropdown-menu {
+    position: absolute;
+    z-index: 1;
+    left: auto;
+    right: 0;
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.table-hover tbody tr:hover {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  
