@@ -12,6 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
     <link rel="stylesheet" href="resources/css/app.css"/>
     <link rel="stylesheet" href="resources/js/bootstrap.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/js/bootstrap.js'])
   </head>
 

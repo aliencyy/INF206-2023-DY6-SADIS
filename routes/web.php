@@ -44,8 +44,8 @@ Route::get('/', function () {
     return view('index');
 })->middleware('guest');
 
-Route::get('/tes/profil', function() {
-    return view('user.profil');
+Route::get('/tes/detailkontent', function() {
+    return view('user.tesDetailCOntent');
 });
 
 
