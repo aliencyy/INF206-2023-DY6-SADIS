@@ -21,6 +21,9 @@ return new class extends Migration
             $table->string('expirations');
             $table->string('CVV');
             $table->timestamp('created_at')->useCurrent();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 

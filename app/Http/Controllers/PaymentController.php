@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Receipts;
 use Exception;
 use RealRashid\SweetAlert\Facades\Alert;
 use DateInterval;
@@ -99,4 +100,22 @@ class PaymentController extends Controller
         
             $data = DB::table('subscriptions')->get();
     }
+
+    public function listPembayaran(){
+        $receipt = Receipts::with('user')->get();
+        return view('user.pengolah.listPembayaran', [
+            'receipt' => $receipt
+        ]);
+    }
+
+    public function konfirmasiPembayaran(Request $request)
+{
+    // Retrieve receipt information from the database
+    $receipt = Receipts::where('receipt_id', $request->input('receipt_id'))->first();
+    $data = $receipt->receipt_id;
+    dd($data);
+    // Pass the receipt information to the view
+    return view('receipt', ['receipt' => $receipt]);
+}
+
 }
