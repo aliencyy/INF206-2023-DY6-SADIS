@@ -55,6 +55,11 @@ Route::get('/mitra', function() {
     return view('mitra');
 });
 
+
+Route::get('/profile', function() {
+    return view('user.pengolah.profile');
+});
+
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/buangsampah', [PagesController::class, 'storeBuang'])->middleware('overdue');
