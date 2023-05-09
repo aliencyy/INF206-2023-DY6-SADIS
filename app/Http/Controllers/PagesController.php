@@ -84,7 +84,7 @@ use Illuminate\Support\Facades\Auth;
      public function orderan($id){
         $new_order = Trash::where('id', $id)->first();
 
-        return view('user.pengolah.orderan',[
+        return view('user.tesDetailCOntent',[
             "orderan" => $new_order
         ]);
      }
