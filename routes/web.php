@@ -8,6 +8,8 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PaymentController;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\DB;
 
 
@@ -60,3 +62,6 @@ Route::post('/bayar', [PaymentController::class, 'storeData']);
 Route::post('/bayar/tipe', [PaymentController::class, 'index']);
 
 route::resource('/dashboard/tes', IsAdminController::class)->middleware(('admin'));
+
+
+Route::post('/aaa', [PagesController::class, 'storeStatus']);
