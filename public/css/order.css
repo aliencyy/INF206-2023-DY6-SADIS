@@ -1,0 +1,14 @@
+.container {
+
+    overflow: auto;
+  }
+  
+  .table {
+    position: relative;
+    /* border-collapse: collapse; */
+    /* border-style: hidden; */
+  }
+
+  td.no-border {
+    border: none;
+}
