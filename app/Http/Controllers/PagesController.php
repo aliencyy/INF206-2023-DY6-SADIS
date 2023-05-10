@@ -25,9 +25,12 @@ use Exception;
      public function dashboard(){
   
         //  $subjects = Subjects::where('users_id', auth()->user()->id)->get();
-  
-         return view('user.penghasil.dashboard', [
+        $trashCounts = $this->countTrash();
+        $methodCounts = $this->countMethod();
+        return view('user.penghasil.dashboard', [
             'title' => 'Dashboard',
+            'trashCounts' => $trashCounts,
+            'methodCounts' => $methodCounts
          ]);
      }
 
@@ -132,6 +135,7 @@ use Exception;
     }
 
     public function storeStatus(Request $request){
+        
         $data = $request;
         DB::table('trashes')
             ->where('id', '=', $data->id)
@@ -142,6 +146,54 @@ use Exception;
     }
 
 
+    
+
+    public function countTrash(){
+
+        $user_id = Auth::id();
+        if (Auth::user()->role == 'admin'){
+        
+        $jenis_sampahs = ['Limbah Farmasi', 'Limbah infeksius', 'Limbah kimia', 'Limbah radioaktif', 'Limbah benda tajam', 'Limbah sitotoksik'];
+        $trashCounts = [];
+        
+        foreach ($jenis_sampahs as $jenis_sampah) {
+            $count = Trash::where('jenis_sampah', $jenis_sampah)->count();
+            $trashCounts[$jenis_sampah] = $count;
+        }
+        
+        return $trashCounts;
+        
+        } else {
+        
+            $jenis_sampahs = ['Limbah Farmasi', 'Limbah infeksius', 'Limbah kimia', 'Limbah radioaktif', 'Limbah benda tajam', 'Limbah sitotoksik'];
+            $trashCounts = [];
+
+            $trash = Trash::where('user_id', $user_id)->get();
+            $collection = collect($trash);
+            
+            foreach ($jenis_sampahs as $jenis_sampah) {
+                $count = $collection->where('jenis_sampah', $jenis_sampah)->count();
+                $trashCounts[$jenis_sampah] = $count;
+            }
+            
+            return $trashCounts;    
+            }
+
+        
+    }
+
+    public function countMethod(){
+        $jenis_pengolahan = ['Insinerator', 'autoclaving', 'disinfeksi kimia', 'enkapsulation', 'penimbunan'];
+        $methodCounts = [];
+        
+        foreach ($jenis_pengolahan as $jenis_pengolahan) {
+            $count = Trash::where('jenis_pengolahan', $jenis_pengolahan)->count();
+            $methodCounts[$jenis_pengolahan] = $count;
+        }
+        
+        return $methodCounts;
+    }
+    
  }
   
   

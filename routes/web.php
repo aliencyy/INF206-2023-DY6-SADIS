@@ -62,9 +62,7 @@ Route::get('/tes/profil', function(){
 //     return view('index', []);
 // })->middleware('guest');
 
-Route::get('/tes/navbar', function() {
-    return view('partials.navbar-login-user');
-});
+Route::get('/tes/data', [PagesController::class, 'countTrash']);
 
 
 Route::get('/mitra', function() {
