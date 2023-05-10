@@ -70,6 +70,8 @@ Route::get('/mitra', function() {
     return view('mitra');
 });
 
-Route::post('/konfirmasiPembayaran', function(Request $request){
-    dd($request);
-});
+// Route::post('/konfirmasiPembayaran', function(Request $request){
+//     dd($request);
+// });
+
+Route::post('/konfirmasiPembayaran', [PaymentController::class, 'konfirmasiPembayaran']);

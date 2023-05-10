@@ -21,6 +21,7 @@
             </thead>
             <tbody>
                 @foreach ($receipt as $d)
+                @if (!$d->Terkonfirmasi)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $d->receipt_id }}</td>
@@ -31,14 +32,17 @@
                             <div class="position-relative ">
                                 <form action="/konfirmasiPembayaran" method="POST" id="form-{{ $loop->iteration }}">
                                     @csrf
-                                    <input type="hidden" name="receipt_id" value="{{ $d->receipt_id }}">
-                                    <button class="btn btn-primary btn-block" id="dropdown-btn-{{ $loop->iteration }}">Konfirmasi Pembayaran</button>
-                                </form>                                
-                                
+                                    <input type="hidden" name="user_id" id="user_id-{{ $loop->iteration }}" value="{{ $d->user_id }}">
+                                    <input type="hidden" name="receipt_id" id="receipt_id-{{ $loop->iteration }}" value="{{ $d->receipt_id }}">
+                                    <input type="hidden" name="duration" id="duration-{{ $loop->iteration }}" value="{{ $d->duration }}">
+                                    <button class="btn btn-primary btn-block" onclick="setStatus({{ $loop->iteration }}, '{{ $d->user_id }}', '{{ $d->receipt_id }}', '{{ $d->duration }}')">Konfirmasi Pembayaran</button>
+                                </form>                                                            
                             </div>
                         </td>
                     </tr>
-                @endforeach
+                @endif
+            @endforeach
+            
             </tbody>
             
             
@@ -77,8 +81,9 @@
             
                 function setStatus(iteration, email, status) {
                     var form = document.getElementById('form-' + iteration);
-                    form.querySelector('#status-' + iteration).value = status;
-                    form.querySelector('#email-' + iteration).value = email;
+                    form.querySelector('#user_id-' + iteration).value = user_id;
+                    form.querySelector('#receipt_id-' + iteration).value = receipt_id;
+                    form.querySelector('#duration-' + iteration).value = duration;
                     form.submit();
                 }
             

@@ -42,6 +42,7 @@ class PaymentController extends Controller
             'id' => $max_id+1,
             'receipt_id' => $new_id,
             'user_id' => Auth::user()->id,
+            'duration' => $request->duration,
             'payment' => $request->payment,
             'name' => $request->name,
             'card_number' => $request->card_number,
@@ -51,7 +52,7 @@ class PaymentController extends Controller
         // Alert::success('berhasil');
 
         
-        $this->updateDate($request->duration);
+        // $this->updateDate($request->duration);
         return redirect()->intended('/langganan');
 
     } catch (Exception $e) {
@@ -59,10 +60,10 @@ class PaymentController extends Controller
     }
     }
     
-    public function updateDate($duration){
+    public function updateDate($duration, $user_id){
         try {
 
-            $data = DB::table('subscriptions')->select('langganan')->where('user_id', '=', Auth::user()->id)->first();
+            $data = DB::table('subscriptions')->select('langganan')->where('user_id', '=', $user_id)->first();
             $currentDate = DateTime::createFromFormat('Y-m-d',$data->langganan) ;
       
             if($duration =='mingguan') {
@@ -74,7 +75,7 @@ class PaymentController extends Controller
             }
         
             DB::table('subscriptions')
-                ->where('user_id', '=', Auth::user()->id)
+                ->where('user_id', '=', $user_id)
                 ->update(['langganan' => $currentDate->format('Y-m-d')]);
         
             } catch (Exception $e) {
@@ -92,7 +93,7 @@ class PaymentController extends Controller
         
             DB::table('subscriptions')->insert([
                 'id' =>  $id + 1,
-                'user_id' => Auth::user()->id,
+                'user_id' => $user_id,
                 'langganan' => $currentDate,
             ]);
             }
@@ -112,10 +113,14 @@ class PaymentController extends Controller
 {
     // Retrieve receipt information from the database
     $receipt = Receipts::where('receipt_id', $request->input('receipt_id'))->first();
-    $data = $receipt->receipt_id;
-    dd($data);
-    // Pass the receipt information to the view
-    return view('receipt', ['receipt' => $receipt]);
+
+    Receipts::where('receipt_id', '=', $receipt->receipt_id)->update(['Terkonfirmasi'=> 1]);
+
+
+    $this->updateDate($request->duration, $request->user_id);
+    Alert::success('Berhasil', 'Pembayaran '.$receipt->receipt_id.' Telah dikonfirmasi.');
+
+    return redirect()->intended('/listPembayaran');
 }
 
 }
