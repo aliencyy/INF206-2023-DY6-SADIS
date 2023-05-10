@@ -35,13 +35,13 @@ style="background-color: #D9F9EE"
             <span class="ms-4"><input type="text" placeholder="bulanan"></span>
         </div> --}}
 
-        <div class="col m-5 fs-5">Status
+        <div class="col m-5 fs-5"><b>Status</b>
             <span class="ms-4">
                 <label for="Status langganan">: {{ $status }}</label>
             </span>
         </div>
 
-        <div class="col m-5 fs-5">Tanggal Jatuh Tempo
+        <div class="col m-5 fs-5"><b>Tanggal Jatuh Tempo</b>
             <span class="ms-4">
                 <label for="tanggal-akhir" class="font-size: 16px;">{{ $tanggal }} </label>
             </span>
@@ -59,9 +59,9 @@ style="background-color: #D9F9EE"
             <div class="col-md-12">
                 <div class="d-flex justify-content-end">
                     <form action="/pricing" method="GET">
-                    <button class="btn rounded-4 me-3" style="background-color: #A3D8BF;">Perpanjang</button>
+                    <button class="btn rounded-4 me-3 shadow" style="background-color: #A3D8BF; color: black; font-size: 18px;">Perpanjang</button>
                     </form>
-                    <button class="btn rounded-4 ml-auto me-5" style="background-color: rgba(250, 59, 59, 0.74);">Batalkan</button>
+                    <button class="btn rounded-4 ml-auto me-5 shadow" style="background-color: rgba(250, 59, 59, 0.74); color: black; font-size: 18px;">Batalkan</button>
                 </div>
             </div>
         </div>
