@@ -47,7 +47,8 @@
                     </thead>
                     <tbody>
                         @foreach ($subs as $d)
-                            <tr onclick="location.href='/order/{{ $d->id }}'">
+                            {{-- <tr onclick="location.href='/order/{{ $d->id }}'"> --}}
+                            <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $d->user->name ?? 'No user associated' }}</td>
                                 <td>{{ $d->user->email ?? 'No user associated' }}</td>

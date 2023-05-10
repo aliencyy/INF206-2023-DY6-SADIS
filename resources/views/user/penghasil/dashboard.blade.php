@@ -49,10 +49,11 @@
                             <button  type="button" class="col p-3 mx-3 rounded-6 border-0" style="background-color: #A3D8BF; border-radius: 10px; ">
                                 <a href="/order" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black; font-size: 18px;">Orderan</a></button>
                             <!-- Button Daftar pelanggan-->
-                            {{-- <button type="button" class="col p-3 mx-3 rounded-6 border-0" style="background-color: #A3D8BF; border-radius: 10px;">
-                                <a href="#" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black; font-size: 18px;">Daftar User</a></button> --}}
-                                <button type="button" class="col p-3 mx-3 rounded-6 border-0" style="background-color: #A3D8BF; border-radius: 10px;">
-                                    <a href="/listSubscriptor" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black; font-size: 18px;">Daftar Pelanggan</a></button>
+                            <button type="button" class="col p-3 mx-3 rounded-6 border-0" style="background-color: #A3D8BF; border-radius: 10px;">
+                                <a href="/listPembayaran" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black; font-size: 18px;">Daftar Pembayaran</a></button>
+
+                            <button type="button" class="col p-3 mx-3 rounded-6 border-0" style="background-color: #A3D8BF; border-radius: 10px;">
+                                <a href="/listSubscriptor" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black; font-size: 18px;">Daftar Pelanggan</a></button>
                         </div>
                     </div>
                     <!-- END Area button Pengolah Limbah-->
