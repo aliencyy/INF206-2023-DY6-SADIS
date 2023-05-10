@@ -2,14 +2,15 @@
  
  namespace App\Http\Controllers;
   
- use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use App\Models\Subscriptions;
 use Illuminate\Http\Request;
- use Illuminate\Support\Facades\DB;
- use App\Models\Trash;
+use Illuminate\Support\Facades\DB;
+use App\Models\Trash;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
- use Exception;
+use RealRashid\SweetAlert\Facades\Alert;
+use Exception;
 
 //  use App\Models\Subjects;
   
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
  {
      public function halamanUtama(){
          return view('index', [
-             'title' => 'SADIS'
+             'title' => ''
          ]);
      }
   
@@ -26,12 +27,13 @@ use Illuminate\Support\Facades\Auth;
         //  $subjects = Subjects::where('users_id', auth()->user()->id)->get();
   
          return view('user.penghasil.dashboard', [
+            'title' => 'Dashboard',
          ]);
      }
 
      public function buang(){
         return view('user.penghasil.buangsampah', [
-        
+            'title' => 'Form Sampah',
         ]);
      }
 
@@ -56,7 +58,9 @@ use Illuminate\Support\Facades\Auth;
             'user_id' => Auth::user()->id,
         ]);
 
-        return redirect('/login');
+        return redirect('/dashboard');
+        
+        
      }
 
      public function order(){
@@ -65,12 +69,14 @@ use Illuminate\Support\Facades\Auth;
         $trash = Trash::with('user')->get();
 
         return view('user.pengolah.order', [
+            'title' => 'Riwayat',
             'trash' => $trash
         ]);
         } else {
             $trash = Trash::where('user_id', $user_id)->get();
 
         return view('user.pengolah.order', [
+            'title' => 'Riwayat',
             'trash' => $trash
         ]);
 
@@ -85,6 +91,7 @@ use Illuminate\Support\Facades\Auth;
         $new_order = Trash::with('user')->where('id', $id)->first();
 
         return view('user.tesDetailCOntent',[
+            'title' => 'Riwayat Form '.$id,
             "orderan" => $new_order
         ]);
      }
@@ -101,13 +108,17 @@ use Illuminate\Support\Facades\Auth;
         }
         
         return view('user.penghasil.statusSubcription', [
+            'title' => 'Langganan',
             'status' => $status,
             'tanggal' => $tanggal
         ]);
     }
 
     public function perpanjanglangganan(){
-        return view('user.penghasil.pricing');
+        return view('user.penghasil.pricing',[
+            'title' => 'Pricing',
+
+        ]);
     }
 
     public function listSubscriptions(){
@@ -115,6 +126,7 @@ use Illuminate\Support\Facades\Auth;
         $subs = Subscriptions::with('user')->get();
             
         return view('user.pengolah.listCustomer', [
+            'title' => 'Daftar Pelanggan',
             'subs' => $subs
         ]);
     }
@@ -124,6 +136,7 @@ use Illuminate\Support\Facades\Auth;
         DB::table('trashes')
             ->where('id', '=', $data->id)
             ->update(['status_pengolahan' => $data->status]);
+   Alert::success('Berhasil', "Status Pengolahan user ".$data->id." telah diperbaharui menjadi ".$data->status);
 
         return redirect('order');
     }

@@ -11,19 +11,19 @@
 </div> --}}
 
 
-<div class="card">
+<div class="card w-75 mx-auto">
 
 
     <div class="card-body">
-            <div class="table-responsive" style="overflow: visible;">
+            <div class="table-responsive" >
                 <table class="table table-sm table-bordered table-striped table-hover ">
                     <thead>
                         <tr>
-                            <th scope="col" width="20%">No.</th>
-                            <th scope="col" width="30%">Nama Instansi</th>
-                            <th scope="col" width="30%">Email</th>
-                            <th scope="col" width="30%">Lokasi</th>
-                            <th scope="col" width="20%">tanggal tenggat</th>
+                            <th scope="col">No.</th>
+                            <th scope="col">Nama Instansi</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Lokasi</th>
+                            <th scope="col">tanggal tenggat</th>
                             {{-- <th scope="col" width="20%">Status</th> --}}
                         </tr>
                     </thead>

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('body')
-style="background-color: #D9F9EE"
 
 @endsection
 
@@ -35,6 +34,9 @@ style="background-color: #D9F9EE"
     </div>
 </div> --}}
 <!-- END Dahsboard penghasil -->
+
+
+
 @endcan
 
     @can('admin')

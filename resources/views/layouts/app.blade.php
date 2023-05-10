@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SADIS | title</title>
+    <title>SADIS | {{ $title }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -27,8 +27,7 @@
 
 
 
-  <body style="background-color: #D9F9EE" >
-  {{-- <body style="background-color: #D9F9EE;"> --}}
+  <body style="background-color: #D9F9EE;">
     @include('sweetalert::alert')
 
 
@@ -36,7 +35,7 @@
     @include('partials.navbar-login-admin')
          <!-- Page Content -->
   <div id="page-content-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+    <nav class="navbar navbar-expand-lg navbar-light py-4 px-4 border-bottom">
         <div class="d-flex align-items-center">
             <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
             <h2 class="fs-2 m-0">(judul)</h2>

@@ -24,6 +24,7 @@ class SubscriptionOverdue
     public function handle(Request $request, Closure $next): Response
     {
         $user_id = Auth::id();
+        $date = $request->tanggal_pengambilan;
         $subscribe = Subscriptions::where('user_id', $user_id)->first();
         $currentDate = Carbon::now();
         try{
@@ -37,7 +38,11 @@ class SubscriptionOverdue
         if ($currentDate->gt($existingDate)) {
             Alert::error('Error', 'Masa berlangganan anda telah habis');
             return redirect('/buangsampah');
-        } else {
+        } elseif ($currentDate->gt($date)) {
+            Alert::error('Error', 'Tanggal penjemputan yang anda pilih tidak valid');
+            return redirect('/buangsampah');
+        } 
+        else {
             // the existing date is in the future or is the current date
             return $next($request);
 
