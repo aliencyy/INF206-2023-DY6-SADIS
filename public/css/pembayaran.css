@@ -5,7 +5,7 @@ body {
   }
   
   form {
-    background-color: aliceblue;
+    background-color: #BFE4D3;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -30,7 +30,7 @@ body {
     border: none;
     margin-bottom: 20px;
     width: 100%;
-    background-color: white;
+    background-color: #A3D8BF;
   }
   
   .select-payment {
@@ -49,9 +49,9 @@ body {
   }
   
   input[type="submit"] {
-    background-color: rgb(0, 106, 255);
+    background-color: #A3D8BF;
   
-    color: white;
+    color: black;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;

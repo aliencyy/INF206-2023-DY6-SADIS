@@ -20,11 +20,13 @@
      }
      
      public function login(Request $request){
+
          $credential = $request->validate([
              'email' => 'required',
              'password' => 'required'
          ]);
   
+
          // if user is exist in database then we will redirect to dashboard page and activate middleware auth page
   
          if(Auth::attempt($credential)){

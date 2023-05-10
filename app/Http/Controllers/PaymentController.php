@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Receipts;
 use Exception;
 use RealRashid\SweetAlert\Facades\Alert;
 use DateInterval;
@@ -41,6 +42,7 @@ class PaymentController extends Controller
             'id' => $max_id+1,
             'receipt_id' => $new_id,
             'user_id' => Auth::user()->id,
+            'duration' => $request->duration,
             'payment' => $request->payment,
             'name' => $request->name,
             'card_number' => $request->card_number,
@@ -50,7 +52,7 @@ class PaymentController extends Controller
         // Alert::success('berhasil');
 
         
-        $this->updateDate($request->duration);
+        // $this->updateDate($request->duration);
         return redirect()->intended('/langganan');
 
     } catch (Exception $e) {
@@ -58,15 +60,12 @@ class PaymentController extends Controller
     }
     }
     
-    public function updateDate($duration){
+    public function updateDate($duration, $user_id){
         try {
 
-
-
-            $data = DB::table('subscriptions')->select('langganan')->where('user_id', '=', Auth::user()->id)->first();
+            $data = DB::table('subscriptions')->select('langganan')->where('user_id', '=', $user_id)->first();
             $currentDate = DateTime::createFromFormat('Y-m-d',$data->langganan) ;
       
-
             if($duration =='mingguan') {
                 $currentDate->add(new DateInterval('P1W'));
             } elseif($duration == 'bulanan') {
@@ -76,7 +75,7 @@ class PaymentController extends Controller
             }
         
             DB::table('subscriptions')
-                ->where('user_id', '=', Auth::user()->id)
+                ->where('user_id', '=', $user_id)
                 ->update(['langganan' => $currentDate->format('Y-m-d')]);
         
             } catch (Exception $e) {
@@ -84,11 +83,17 @@ class PaymentController extends Controller
             $id = DB::table('subscriptions')->max('id');
         
             $currentDate = now();
-            $currentDate->add(new DateInterval('P1W'));
+            if($duration =='mingguan') {
+                $currentDate->add(new DateInterval('P1W'));
+            } elseif($duration == 'bulanan') {
+                $currentDate->add(new DateInterval('P1M'));
+            } elseif($duration == 'tahunan') {
+                $currentDate->add(new DateInterval('P1Y'));
+            }
         
             DB::table('subscriptions')->insert([
                 'id' =>  $id + 1,
-                'user_id' => Auth::user()->id,
+                'user_id' => $user_id,
                 'langganan' => $currentDate,
             ]);
             }
@@ -96,4 +101,26 @@ class PaymentController extends Controller
         
             $data = DB::table('subscriptions')->get();
     }
+
+    public function listPembayaran(){
+        $receipt = Receipts::with('user')->get();
+        return view('user.pengolah.listPembayaran', [
+            'receipt' => $receipt
+        ]);
+    }
+
+    public function konfirmasiPembayaran(Request $request)
+{
+    // Retrieve receipt information from the database
+    $receipt = Receipts::where('receipt_id', $request->input('receipt_id'))->first();
+
+    Receipts::where('receipt_id', '=', $receipt->receipt_id)->update(['Terkonfirmasi'=> 1]);
+
+
+    $this->updateDate($request->duration, $request->user_id);
+    Alert::success('Berhasil', 'Pembayaran '.$receipt->receipt_id.' Telah dikonfirmasi.');
+
+    return redirect()->intended('/listPembayaran');
+}
+
 }

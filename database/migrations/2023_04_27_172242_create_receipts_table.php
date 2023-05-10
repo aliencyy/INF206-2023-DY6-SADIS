@@ -15,12 +15,17 @@ return new class extends Migration
             $table->id();
             $table->string('receipt_id');
             $table->unsignedBigInteger('user_id');
+            $table->string('duration');
             $table->string('payment');
             $table->string('name');
             $table->string('card_number');
             $table->string('expirations');
             $table->string('CVV');
+            $table->boolean('Terkonfirmasi')->default(0);
             $table->timestamp('created_at')->useCurrent();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 

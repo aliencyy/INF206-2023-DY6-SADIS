@@ -39,20 +39,15 @@
                         <tr>
                             <th scope="col" width="20%">No.</th>
                             <th scope="col" width="30%">Nama Instansi</th>
-                            <th scope="col" width="30%">Email</th>
-                            <th scope="col" width="30%">Lokasi</th>
-                            <th scope="col" width="20%">tanggal tenggat</th>
+                            <th scope="col" width="20%">Email</th>
                             {{-- <th scope="col" width="20%">Status</th> --}}
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($subs as $d)
-                            {{-- <tr onclick="location.href='/order/{{ $d->id }}'"> --}}
-                            <tr>
+                            <tr onclick="location.href='/order/{{ $d->id }}'">
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $d->user->name ?? 'No user associated' }}</td>
                                 <td>{{ $d->user->email ?? 'No user associated' }}</td>
-                                <td>{{ $d->user->lokasi ?? 'No user associated' }}</td>
                                 <td>{{ $d->langganan }}</td>
                                 {{-- <td>{{ $d-> ?? 'No user associated' }}</td> --}}
                             </tr>
