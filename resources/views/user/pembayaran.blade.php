@@ -2,7 +2,7 @@
 @extends('layouts.app')
 @section('content')
 
-
+  <div class="form-bayar">
     <link href="{{ asset('css/pembayaran.css') }}" rel="stylesheet">
     <form class="needs-validation mb-5" action="/bayar" method="POST">
     @csrf
@@ -43,5 +43,6 @@
 
       <input type="submit" value="Continue to checkout" style="background-color: #A3D8BF; font-size: 20px" />
     </form>
+  </div>
 
 @endsection
