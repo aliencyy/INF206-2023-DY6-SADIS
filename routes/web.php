@@ -53,16 +53,16 @@ Route::post('/bayar', [PaymentController::class, 'storeData']);
 Route::post('/bayar/tipe', [PaymentController::class, 'index']);
 
 
-Route::get('/tes/status', function(){
-    return view('user.pengolah.statuslangganan');
+Route::get('/tes/riwayat', function(){
+    return view('user.riwayat');
 });
 
 Route::get('/', function () {
     return view('index');
 })->middleware('guest');
 
-Route::get('/tes/detailkontent', function() {
-    return view('user.tesDetailCOntent');
+Route::get('/tes/navbar', function() {
+    return view('partials.navbar-login-user');
 });
 
 

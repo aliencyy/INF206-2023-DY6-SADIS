@@ -9,7 +9,7 @@
 
 @can('user')
       <!-- Isi dashboard penghasil -->
-  <div class="container p-5" style="margin-top: 200px;">
+  {{-- <div class="container p-5" style="margin-top: 200px;">
     <div class="panel panel-default position-relative" style="border-radius: 30px;">
         <div class="panel-body p-5 rounded-6" style="background-color: #BFE4D3; border-radius: 10px;">
             <div class="align-middle text-center"><h3>Pengolah Limbah B3 Aceh</h3>
@@ -32,13 +32,13 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- END Dahsboard penghasil -->
 @endcan
 
     @can('admin')
           
-        <div class="container p-5" style="margin-top: 200px;">
+        {{-- <div class="container p-5" style="margin-top: 200px;">
         <div class="panel panel-default position-relative" style="border-radius: 30px;">
             <div class="panel-body p-5 rounded-6" style="background-color: #BFE4D3; border-radius: 10px;">
                 <div class="align-middle text-center"><h3>Pengolah Limbah B3 Aceh</h3>
@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     @endcan
 
   @endsection
