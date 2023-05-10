@@ -70,8 +70,15 @@ Route::get('/mitra', function() {
     return view('mitra');
 });
 
-// Route::post('/konfirmasiPembayaran', function(Request $request){
-//     dd($request);
-// });
+
+Route::get('/profile', function() {
+    return view('user.pengolah.profile');
+});
+
+Route::post('/register', [RegisterController::class, 'store']);
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/buangsampah', [PagesController::class, 'storeBuang'])->middleware('overdue');
+Route::post('/bayar', [PaymentController::class, 'storeData']);
+Route::post('/bayar/tipe', [PaymentController::class, 'index']);
 
 Route::post('/konfirmasiPembayaran', [PaymentController::class, 'konfirmasiPembayaran']);
