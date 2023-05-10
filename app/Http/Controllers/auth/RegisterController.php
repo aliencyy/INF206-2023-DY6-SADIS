@@ -47,6 +47,7 @@
          $id = DB::table('users')->max('id');
   
   
+         $userid = ($id + 10000000);
          # Jika EMAIL sudah ada yang punya maka kita harus mencegahnya agar tidak bisa register
          if(DB::table('users')->where('email', $request->email)->exists()){
             Alert::error('Error', 'NPM udah ada yang punya oi');
@@ -56,6 +57,7 @@
          // store data to table user
          DB::table('users')->insert([
              'id' => $id + 1,
+             'Id_akun' => $userid,
              'name' => $request->name,
              'email' => $request->email,
              'lokasi' => $request->lokasi,

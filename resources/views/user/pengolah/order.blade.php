@@ -30,7 +30,7 @@
                             <div class="position-relative ">
                                 <button class="btn btn-primary btn-block" id="dropdown-btn-{{ $loop->iteration }}">ubah</button>
                                 <ul class="dropdown-menu position-absolute d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px d-none" id="dropdown-menu-{{ $loop->iteration }}" data-bs-theme="light"">
-                                    <form action="/aaa" method="POST" id="form-{{ $loop->iteration }}">
+                                    <form action="/updateStatus" method="POST" id="form-{{ $loop->iteration }}">
                                         @csrf
                                         <input type="hidden" name="status" id="status-{{ $loop->iteration }}" value="">
                                         <input type="hidden" name="id" id="id-{{ $loop->iteration }}" value="{{ $d->id }}">
