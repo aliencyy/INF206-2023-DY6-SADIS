@@ -62,6 +62,8 @@ body {
 </style>
 
 <body>
+    @include('sweetalert::alert')
+
     <!-- Menu Daftar -->
     <div class="daftar">
 

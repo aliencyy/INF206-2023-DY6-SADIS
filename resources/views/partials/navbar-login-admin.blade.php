@@ -1,12 +1,12 @@
     @can('admin')
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
-        <div class="bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+        <div class="sidebar" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 my-1 primary-text fs-4 fw-bold text-uppercase border-bottom ">
                 <img src="{{ asset('img/Logo-SADIS.png') }}" alt="SADIS" width="30" class="start-0">  SADIS</div>
             <div class="list-group list-group-flush my-3">
                 <a href="/dashboard" class="list-group-item list-group-item-action bg-transparent second-text fw-bold "><i
-                    class="fas fa-gauge-simple me-2"></i>Dashboard</a>
+                    class="fas fa-house me-2"></i>Dashboard</a>
                 <a href="/order" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fa-solid fa-list me-2"></i>Orderan</a>
                 <a href="/listPembayaran" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i 
@@ -25,18 +25,18 @@
     @can('user')
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
-        <div class="bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+        <div class="sidebar" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 my-1 primary-text fs-4 fw-bold text-uppercase border-bottom">
                 <img src="{{ asset('img/Logo-SADIS.png') }}" alt="SADIS" width="30" class="start-0">  SADIS</div>
             <div class="list-group list-group-flush my-3">
                 <a href="/dashboard" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                    class="fas fa-gauge-simple me-2"></i>Dashboard</a>
+                    class="fas fa-house me-2"></i>Dashboard</a>
                 <a href="/buangsampah" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i 
-                    class="fas fa-wallet me-2"></i></i>Ajukan Pembuangan Sampah</a>
+                    class="fas fa-pen-nib me-2"></i></i>Ajukan Pembuangan Sampah</a>
                 <a href="/order" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-user me-2"></i>Riwayat Pembuangan  Sampah</a>
+                        class="fa-solid fa-list me-2"></i>Riwayat Pembuangan  Sampah</a>
                 <a href="/langganan" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i 
-                    class="fas fa-gear me-2"></i></i>Subscription</a>
+                    class="fas fa-wallet me-2"></i></i>Subscription</a>
 
             </div>
         </div>

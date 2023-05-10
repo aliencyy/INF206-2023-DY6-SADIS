@@ -4,8 +4,18 @@
 
 <link rel="stylesheet" href="{{ asset('css/order.css') }}">
 
-<div class="card">
+<div class="card w-75 mx-auto text-center">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Pembayaran Baru</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/allreceipt">Riwayat Pembayaran</a>
+          </li>
 
+        </ul>
+      </div>
     <div class="card-body">
 
         <div class="table-responsive" style="overflow: visible;">
@@ -16,7 +26,7 @@
                         <th>ID Pembayaran</th>
                         <th>Email</th>
                         <th>Tanggal Pembayaran</th>
-                        <th class="border-0">Konfirmasi</th>
+                        <th class="">Konfirmasi</th>
                     </tr>
                 </thead>
                 <tbody>

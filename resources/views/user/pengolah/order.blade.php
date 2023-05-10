@@ -6,7 +6,7 @@
 
 
 
-    <div class="card">
+    <div class="card w-75 mx-auto ">
 
 
         <div class="card-body">
@@ -109,7 +109,7 @@
             @can('user')
         
             <div>
-            <table class="table table-sm table-bordered table-striped">
+            <table class="table table-sm table-bordered table-striped table-hover">
                 <thead>
                     <th>No</th>
                     <th>tangal penjemputan</th>

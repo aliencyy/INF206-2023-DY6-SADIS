@@ -32,6 +32,7 @@ Route::get('/order',[PagesController::class, 'order'])->middleware('auth');
 Route::get('/order/{id}', [PagesController::class, 'orderan'])->middleware('auth');
 Route::get('/langganan', [PagesController::class, 'langganan'])->middleware('auth');
 Route::get('/pricing', [PagesController::class, 'perpanjanglangganan'])->middleware('auth');
+Route::get('/', [PagesController::class, 'halamanUtama'])->middleware('guest');
 Route::get('/listSubscriptor', [PagesController::class, 'listSubscriptions'])->middleware('admin');
 Route::post('/buangsampah', [PagesController::class, 'storeBuang'])->middleware('overdue');
 Route::resource('/dashboard/tes', IsAdminController::class)->middleware(('admin'));
@@ -47,23 +48,21 @@ Route::post('/login', [LoginController::class, 'login']);
 
 
 Route::get('/bayar', [PaymentController::class, 'index'])->middleware('auth');
-Route::get('listPembayaran', [PaymentController::class, 'listPembayaran'])->middleware('admin');
-
+Route::get('/listPembayaran', [PaymentController::class, 'listPembayaran'])->middleware('admin');
+Route::get('/allreceipt', [PaymentController::class, 'showAllReceipt'])->middleware('admin');
 Route::post('/bayar', [PaymentController::class, 'storeData']);
 Route::post('/bayar/tipe', [PaymentController::class, 'index']);
 
 
-Route::get('/tes/riwayat', function(){
-    return view('user.riwayat');
+Route::get('/tes/profil', function(){
+    return view('user.pengolah.profile');
 });
 
-Route::get('/', function () {
-    return view('index');
-})->middleware('guest');
+// Route::get('/', function () {
+//     return view('index', []);
+// })->middleware('guest');
 
-Route::get('/tes/navbar', function() {
-    return view('partials.navbar-login-user');
-});
+Route::get('/tes/data', [PagesController::class, 'countTrash']);
 
 
 Route::get('/mitra', function() {
