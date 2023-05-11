@@ -70,7 +70,9 @@ Route::get('/tes/data', [PagesController::class, 'countTrash']);
 
 
 Route::get('/mitra', function() {
-    return view('mitra');
+    return view('mitra', [
+        "title" => "Mitra"
+    ]);
 });
 
 
