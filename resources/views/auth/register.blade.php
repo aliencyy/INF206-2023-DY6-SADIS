@@ -59,7 +59,13 @@
     .daftar form input[type="submit"] {
         font-size: 15px;
         margin-top: 15px;
+        background-color: #698269;
     }
+
+    .daftar .btn-primary:hover{
+        background-color: #40513B;
+    }
+
 </style>
 
 <body>
@@ -97,8 +103,7 @@
                 <input class="form-check-input" type="checkbox" id="check">
                 <label class="form-check-label" for="check">Ingat saya</label>
             </div> --}}
-            <input class="btn btn-success w-100" type="submit" value="Daftar">
-        </form>
+            <input class="btn btn-primary border-0 w-100" type="submit" value="Daftar">        </form>
     </div>
     <!-- Akhir Menu Daftar -->
 

@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SADIS</title>
+    <title>SADIS | {{ $title }}</title>
     <link rel="stylesheet" href="resources/css/app.css"/>
     <link rel="stylesheet" href="resources/js/bootstrap.js">
+    <link rel="stylesheet" href="resources/sass/app.scss">
     @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/js/bootstrap.js'])
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 
 <style>
@@ -58,6 +58,24 @@ body {
 .daftar form input[type="submit"] {
     font-size: 15px;
     margin-top: 15px;
+    background-color: #698269;
+}
+
+.daftar form input .btn-primary {
+    font-size: 15px
+    margin-top:15px;
+    background-color: #698269;
+}
+
+.daftar .btn-primary {
+    font-size: 15px
+    margin-top:15px;
+    background-color: #698269;
+}
+.daftar .btn-primary:hover {
+    font-size: 15px
+    margin-top:15px;
+    background-color: #40513B;
 }
 </style>
 
@@ -65,9 +83,9 @@ body {
     @include('sweetalert::alert')
 
     <!-- Menu Daftar -->
-    <div class="daftar">
+    <div class="daftar modal-content rounded-4 shadow border-0" style="background-color: #FDFEF3">
 
-        <h1 class="text-center">Menu Masuk</h1>
+        <h1 class="text-center fw-bolder">Menu Masuk</h1>
 
         @if (session('success'))
             <div class="alert alert-success">
@@ -78,7 +96,7 @@ body {
         <form class="needs-validation" action="/login" method="POST">
             @csrf
             <div class="form-group">
-                <label class="form-label" for="email">EMAIL</label>
+                <label class="form-label" for="email">Email</label>
                 <input name="email" class="form-control @error("email") is-invalid @enderror"  placeholder="Masukkan ID" required>
             </div>
             <div class="form-group was-validated">
@@ -89,9 +107,9 @@ body {
                 <input class="form-check-input" type="checkbox" id="check">
                 <label class="form-check-label" for="check">Ingat saya</label>
             </div>
-            <input class="btn btn-success w-100" type="submit" value="Masuk" style="margin-bottom: 20px;">
+            <input class="btn btn-primary w-100 border-0" type="submit" value="Masuk" style="margin-bottom: 20px;">
         </form>
-        <input class="btn btn-success w-100" onclick="location.href='/register'" value="Buat Akun">
+        <button class=" btn btn-primary w-100 border-0" onclick="location.href='/register'">Buat Akun</button>
     </div>
     <!-- Akhir Menu Daftar -->
 
