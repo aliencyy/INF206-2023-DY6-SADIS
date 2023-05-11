@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SADIS | {{ $title }}</title>
-    <link rel="stylesheet" href="resources/css/app.css"/>
+    <link rel="stylesheet" href="resources/css/app.css" />
     <link rel="stylesheet" href="resources/js/bootstrap.js">
     <link rel="stylesheet" href="resources/sass/app.scss">
     @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/js/bootstrap.js'])
@@ -14,69 +14,70 @@
 
 <style>
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #D9F9EE;
-    display: grid;
-    place-items: center;
-}
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #D9F9EE;
+        display: grid;
+        place-items: center;
+    }
 
-.daftar {
-    width: 500px;
-    height: min-content;
-    padding: 15px;
-    border-radius: 12px;
-    background: #BFE4D3;
-    display: inline-block;
-}
+    .daftar {
+        width: 500px;
+        height: min-content;
+        padding: 15px;
+        border-radius: 12px;
+        background: #BFE4D3;
+        display: inline-block;
+    }
 
-.daftar h1 {
-    font-size: 25px;
-    margin-bottom: 20px;
-}
+    .daftar h1 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
 
-.daftar form {
-    font-size: 15px;
-}
+    .daftar form {
+        font-size: 15px;
+    }
 
-.daftar form .form-group {
-    margin-bottom: 10px;
-}
+    .daftar form .form-group {
+        margin-bottom: 10px;
+    }
 
-/* .daftar input {
+    /* .daftar input {
     border-radius: 10px;
 } */
 
-.daftar form input[type="submit"] {
-    font-size: 15px;
-    margin-top: 15px;
-    background-color: #698269;
-}
+    .daftar form input[type="submit"] {
+        font-size: 15px;
+        margin-top: 15px;
+        background-color: #698269;
+    }
 
-.daftar form input .btn-primary {
-    font-size: 15px
-    margin-top:15px;
-    background-color: #698269;
-}
+    .daftar form input .btn-primary {
+        font-size: 15px;
+        margin-top: 15px;
+        background-color: #698269;
+    }
 
-.daftar .btn-primary {
-    font-size: 15px
-    margin-top:15px;
-    background-color: #698269;
-}
-.daftar .btn-primary:hover {
-    font-size: 15px
-    margin-top:15px;
-    background-color: #40513B;
-}
+    .daftar .btn-primary {
+        font-size: 15px;
+        margin-top: 15px;
+        background-color: #698269;
+    }
+
+    .daftar .btn-primary:hover {
+        font-size: 15px;
+        margin-top: 15px;
+        background-color: #40513B;
+    }
 </style>
 
 <body>
@@ -88,16 +89,16 @@ body {
         <h1 class="text-center fw-bolder">Menu Masuk</h1>
 
         @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
         @endif
 
         <form class="needs-validation" action="/login" method="POST">
             @csrf
             <div class="form-group">
                 <label class="form-label" for="email">Email</label>
-                <input name="email" class="form-control @error("email") is-invalid @enderror"  placeholder="Masukkan ID" required>
+                <input name="email" class="form-control @error(" email") is-invalid @enderror" placeholder="Masukkan ID" required>
             </div>
             <div class="form-group was-validated">
                 <label class="form-label" for="password">Password</label>
