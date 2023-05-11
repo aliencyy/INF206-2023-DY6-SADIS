@@ -1,7 +1,7 @@
 :root {
     --main-bg-color: #009d63;
     --main-text-color: #009d63;
-    --second-text-color: #bbbec5;
+    --second-text-color: #454f4c;
     --second-bg-color: #c1efde;
   }
   
@@ -44,6 +44,7 @@
     -moz-transition: margin 0.25s ease-out;
     -o-transition: margin 0.25s ease-out;
     transition: margin 0.25s ease-out;
+    
   }
   
   #sidebar-wrapper .sidebar-heading {
@@ -87,9 +88,25 @@
     #page-content-wrapper {
       min-width: 0;
       width: 100%;
+      
     }
   
     #wrapper.toggled #sidebar-wrapper {
       margin-left: -15rem;
     }
   }
+
+  .sidebar{
+    background-color: #f9eed9;
+  }
+  
+ .breadcrumb{
+    background-color: #f9eed9;
+    
+ }
+
+ .nav-home{
+  color: black;
+ }
+
+ 

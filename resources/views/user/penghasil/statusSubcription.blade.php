@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('body')
-style="background-color: #D9F9EE"
 @endsection
 
 @section('content')
@@ -29,7 +28,7 @@ style="background-color: #D9F9EE"
 <!-- End Navbar --> --}}
 
 <!-- Content -->
-<div class="container w-80 p-3 rounded-4" style="background-color: #BFE4D3; height: 400px; margin-top: 150px;">
+<div class="container w-80 p-3 rounded-4" style="background-color: #fbfefd; height: 400px; margin-top: 150px;">
     <div class="row">
         {{-- <div class="col m-5 fs-5">Jenis Langganan
             <span class="ms-4"><input type="text" placeholder="bulanan"></span>

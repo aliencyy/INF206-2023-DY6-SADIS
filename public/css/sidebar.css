@@ -1,0 +1,9 @@
+.list-group-item:hover {
+  background-color: #8fa49d; /* change to a darker color on hover */
+  color: white; /* change the text color to white */
+}
+
+.list-group-item {
+    background-color: #f9eed9;
+    color: black;
+}

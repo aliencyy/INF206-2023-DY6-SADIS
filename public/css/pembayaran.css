@@ -1,11 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    font-size: larger;
-  }
+.form-bayar input[type=text],
+.form-bayar input[type=radio],
+.form-bayar input[type=submit],
+.form-bayar label {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+
+}
+
   
   form {
-    background-color: #BFE4D3;
+    background-color: #fbfefd;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -27,10 +31,10 @@ body {
   input[type="tel"] {
     padding: 10px;
     border-radius: 5px;
-    border: none;
+    border: black solid 1px;
     margin-bottom: 20px;
     width: 100%;
-    background-color: #A3D8BF;
+    background-color: white;
   }
   
   .select-payment {
@@ -49,7 +53,6 @@ body {
   }
   
   input[type="submit"] {
-    background-color: #A3D8BF;
   
     color: black;
     border: none;
@@ -67,3 +70,5 @@ body {
     padding-top: 20px;
     display: flex;
   }
+
+

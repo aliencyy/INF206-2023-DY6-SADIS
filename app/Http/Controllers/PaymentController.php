@@ -19,6 +19,7 @@ class PaymentController extends Controller
         $duration = $request->input('duration');
  
         return view('user.pembayaran',[
+            'title' => 'Bayar',
             'duration' => $duration,
         ]);
     }
@@ -105,6 +106,15 @@ class PaymentController extends Controller
     public function listPembayaran(){
         $receipt = Receipts::with('user')->get();
         return view('user.pengolah.listPembayaran', [
+            'title' => 'Daftar Pembayaran',
+            'receipt' => $receipt
+        ]);
+    }
+
+    public function showAllReceipt(){
+        $receipt = Receipts::with('user')->get();
+        return view('user.pengolah.allReceipt', [
+            'title' => 'Daftar Pembayaran',
             'receipt' => $receipt
         ]);
     }
