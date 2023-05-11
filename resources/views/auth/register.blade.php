@@ -59,6 +59,11 @@
     .daftar form input[type="submit"] {
         font-size: 15px;
         margin-top: 15px;
+        background-color: #698269;
+    }
+
+    .daftar .btn-primary:hover {
+        background-color: #40513B;
     }
 </style>
 
@@ -66,9 +71,9 @@
     @include('sweetalert::alert')
 
     <!-- Menu Daftar -->
-    <div class="daftar">
+    <div class="daftar modal-content rounded-4 shadow border-0" style="background-color: #FDFEF3">
 
-        <h1 class="text-center">Menu Daftar</h1>
+        <h1 class="text-center fw-bolder">Menu Daftar</h1>
 
         <form class="needs-validation" action="/register" method="POST">
             @csrf
@@ -97,8 +102,12 @@
                 <input class="form-check-input" type="checkbox" id="check">
                 <label class="form-check-label" for="check">Ingat saya</label>
             </div> --}}
-            <input class="btn btn-success w-100" type="submit" value="Daftar">
+            <input class="btn btn-primary border-0 w-100" type="submit" value="Daftar">
         </form>
+        <p class="text-black text-center mt-3">
+            Sudah memiliki akun?
+            <a href="/login" class="text-decoration-none" style="color:#0077FF">Masuk</a>
+        </p>
     </div>
     <!-- Akhir Menu Daftar -->
 
