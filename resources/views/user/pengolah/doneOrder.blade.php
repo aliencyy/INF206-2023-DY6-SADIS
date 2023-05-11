@@ -43,7 +43,7 @@
                                     <td onclick="location.href='/order/{{ $d->id }}'" style="width: 25%" class="border-0">{{ $d->status_pengolahan }}</td>
                                     <td class="p-0" style="width: 0%;">
                                         <div class="position-relative ">
-                                            <button class="btn btn-primary btn-block" id="dropdown-btn-{{ $loop->iteration }}" disabled>ubah</button>
+                                            <button class="btn btn-dark btn-block" id="dropdown-btn-{{ $loop->iteration }}" disabled>ubah</button>
                                             <ul class="dropdown-menu position-absolute d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px d-none" id="dropdown-menu-{{ $loop->iteration }}" data-bs-theme="light"">
                                                 <form action="/updateStatus" method="POST" id="form-{{ $loop->iteration }}">
                                                     @csrf

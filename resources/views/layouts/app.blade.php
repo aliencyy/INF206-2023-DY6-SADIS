@@ -35,11 +35,26 @@
     @include('partials.navbar-login-admin')
          <!-- Page Content -->
   <div id="page-content-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-light py-4 px-4 border-bottom">
-        <div class="d-flex align-items-center">
-            <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-            <h2 class="fs-2 m-0">(judul)</h2>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light py-1 my-2 px-3 border-bottom">
+        <div class="d-flex align-items-center ">
+            <i class="fas fa-align-left primary-text fs-3 me-3 " id="menu-toggle"></i>
+            <nav aria-label="breadcrumb" class=" px-5 rounded-3 ">
+                <ol class="breadcrumb breadcrumb-chevron py-2 my-3 bg-body-tertiary rounded-3 border">
+                  <li class="breadcrumb-item ms-3">
+                    <a class="link-body-emphasis " href="#">
+                        <a href="/#" class="nav-home"><i
+                            class="fas fa-house me-2"></i></a>
+                        <span class="visually-hidden">Home</span>
+                    </a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a class="nav-home link-body-emphasis fw-semibold text-decoration-none" href="#">{{ $title }}</a>
+                  </li>
+                  <li class="breadcrumb-item active me-4" aria-current="page">
+                  </li>
+                </ol>
+              </nav>
+            </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

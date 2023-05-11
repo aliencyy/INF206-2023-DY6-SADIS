@@ -69,9 +69,9 @@ body {
 
         <h1 class="text-center">Menu Masuk</h1>
 
-        @if (session('success'))
+        @if (session('Information'))
             <div class="alert alert-success">
-                {{ session('success') }}
+                {{ session('Information') }}
             </div>
         @endif
 
