@@ -65,7 +65,7 @@
          ]);
   
          // example:
-         return redirect('/login');
+         return redirect('/login')->with('Information', 'Berhasil Membuat akun');
   
      }
   

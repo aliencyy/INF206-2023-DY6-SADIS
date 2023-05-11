@@ -3,6 +3,9 @@
 @section('content')
 
 @can('admin')
+
+
+
 <div class="card-body">
     <table class="table table-sm table-bordered table-striped">
         <thead>
@@ -63,3 +66,4 @@
 
 
 @endsection
+

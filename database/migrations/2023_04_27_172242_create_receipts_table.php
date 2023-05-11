@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('card_number');
             $table->string('expirations');
-            $table->string('CVV');
+            $table->string('CVV')->fixedLength(3);
             $table->boolean('Terkonfirmasi')->default(0);
             $table->timestamp('created_at')->useCurrent();
 

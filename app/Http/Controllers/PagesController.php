@@ -84,6 +84,26 @@ use Exception;
         ]);
 
         }
+     }
+
+     public function doneorder(){
+        $user_id = Auth::id();
+        if (Auth::user()->role == 'admin'){
+        $trash = Trash::with('user')->get();
+
+        return view('user.pengolah.doneOrder', [
+            'title' => 'Riwayat',
+            'trash' => $trash
+        ]);
+        } else {
+            $trash = Trash::where('user_id', $user_id)->get();
+
+        return view('user.pengolah.doneOrder', [
+            'title' => 'Riwayat',
+            'trash' => $trash
+        ]);
+
+        }
         // dd($trash);
 
      }
@@ -194,6 +214,13 @@ use Exception;
         return $methodCounts;
     }
     
+    public function profil(){
+        $dataProfil = User::where('id', Auth::id())->get();
+        return view('user.pengolah.profile',[
+            'title' => 'Profil',
+            $dataProfil
+        ]);
+    }
  }
   
   

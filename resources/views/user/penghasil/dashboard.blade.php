@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
 @can('user')
       <!-- Isi dashboard penghasil -->
@@ -43,8 +44,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah infeksius'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah infeksius'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah Infeksius yang telah dibuang</div>
@@ -63,8 +64,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah radioaktif'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah radioaktif'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah Radioaktif yang telah dibuang</div>
@@ -84,8 +85,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah sitotoksik'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah sitotoksik'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah Sitotoksik yang telah dibuang</div>
@@ -102,8 +103,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah kimia'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah kimia'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah kimia yang telah dibuang</div>
@@ -120,8 +121,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah Farmasi'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah Farmasi'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah Farmasi yang telah dibuang</div>
@@ -138,8 +139,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah benda tajam'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah benda tajam'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah benda tajam yang telah dibuang</div>
@@ -197,8 +198,8 @@
     
             <div class="card-author" style="display: flex; justify-content: center;">
                 <svg class="full-circle" viewBox="-15 -15 100 100">
-                  <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-                  <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah infeksius'] }} unit</text>
+                  <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+                  <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah infeksius'] }} unit</text>
                 </svg>
                 <div class="author-name">
                   <div class="author-name-prefix">Jumlah sampah Infeksius yang telah diolah</div>
@@ -217,8 +218,8 @@
     
             <div class="card-author" style="display: flex; justify-content: center;">
                 <svg class="full-circle" viewBox="-15 -15 100 100">
-                  <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-                  <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah radioaktif'] }} unit</text>
+                  <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+                  <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah radioaktif'] }} unit</text>
                 </svg>
                 <div class="author-name">
                   <div class="author-name-prefix">Jumlah sampah Radioaktif yang telah diolah</div>
@@ -238,8 +239,8 @@
     
             <div class="card-author" style="display: flex; justify-content: center;">
                 <svg class="full-circle" viewBox="-15 -15 100 100">
-                  <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-                  <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah sitotoksik'] }} unit</text>
+                  <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+                  <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah sitotoksik'] }} unit</text>
                 </svg>
                 <div class="author-name">
                   <div class="author-name-prefix">Jumlah sampah Sitotoksik yang telah diolah</div>
@@ -256,8 +257,8 @@
     
             <div class="card-author" style="display: flex; justify-content: center;">
                 <svg class="full-circle" viewBox="-15 -15 100 100">
-                  <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-                  <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah kimia'] }} unit</text>
+                  <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+                  <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah kimia'] }} unit</text>
                 </svg>
                 <div class="author-name">
                   <div class="author-name-prefix">Jumlah sampah kimia yang telah diolah</div>
@@ -274,8 +275,8 @@
     
             <div class="card-author" style="display: flex; justify-content: center;">
                 <svg class="full-circle" viewBox="-15 -15 100 100">
-                  <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-                  <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah Farmasi'] }} unit</text>
+                  <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+                  <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah Farmasi'] }} unit</text>
                 </svg>
                 <div class="author-name">
                   <div class="author-name-prefix">Jumlah sampah Farmasi yang telah diolah</div>
@@ -292,8 +293,8 @@
     
             <div class="card-author" style="display: flex; justify-content: center;">
                 <svg class="full-circle" viewBox="-15 -15 100 100">
-                  <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-                  <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $trashCounts['Limbah benda tajam'] }} unit</text>
+                  <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+                  <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah benda tajam'] }} unit</text>
                 </svg>
                 <div class="author-name">
                   <div class="author-name-prefix">Jumlah sampah benda tajam yang telah diolah</div>
@@ -315,8 +316,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $methodCounts['Insinerator'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $methodCounts['Insinerator'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah yang telah diolah dengan metode Insinerator</div>
@@ -335,8 +336,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $methodCounts['autoclaving'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $methodCounts['autoclaving'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah yang telah diolah dengan metode Autoclaving</div>
@@ -356,8 +357,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $methodCounts['disinfeksi kimia'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $methodCounts['disinfeksi kimia'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah yang telah diolah dengan metode Disinfeksi Kimia</div>
@@ -374,8 +375,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $methodCounts['enkapsulation'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $methodCounts['enkapsulation'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah yang telah diolah dengan metode Enkapsulation</div>
@@ -392,8 +393,8 @@
 
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
-              <circle style="fill: none; stroke: #69b3a2; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#69b3a2" style="font-size: 14;">{{ $methodCounts['penimbunan'] }} unit</text>
+              <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $methodCounts['penimbunan'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah yang telah diolah dengan metode Penimbunan</div>

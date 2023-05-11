@@ -88,10 +88,10 @@
 
         <h1 class="text-center fw-bolder">Menu Masuk</h1>
 
-        @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+        @if (session('Information'))
+            <div class="alert alert-success">
+                {{ session('Information') }}
+            </div>
         @endif
 
         <form class="needs-validation" action="/login" method="POST">
