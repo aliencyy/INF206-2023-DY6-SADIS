@@ -35,6 +35,7 @@ Route::get('/langganan', [PagesController::class, 'langganan'])->middleware('aut
 Route::get('/pricing', [PagesController::class, 'perpanjanglangganan'])->middleware('auth');
 Route::get('/', [PagesController::class, 'halamanUtama'])->middleware('guest');
 Route::get('/listSubscriptor', [PagesController::class, 'listSubscriptions'])->middleware('admin');
+Route::get('/profil', [PagesController::class, 'profil'])->middleware('auth');
 Route::post('/buangsampah', [PagesController::class, 'storeBuang'])->middleware('overdue');
 Route::resource('/dashboard/tes', IsAdminController::class)->middleware(('admin'));
 Route::post('/updateStatus', [PagesController::class, 'storeStatus']);
@@ -56,7 +57,9 @@ Route::post('/bayar/tipe', [PaymentController::class, 'index']);
 
 
 Route::get('/tes/profil', function(){
-    return view('user.pengolah.profile');
+    return view('user.pengolah.profile',[
+        'title' => 'a'
+    ]);
 });
 
 // Route::get('/', function () {

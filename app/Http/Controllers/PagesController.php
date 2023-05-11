@@ -214,6 +214,13 @@ use Exception;
         return $methodCounts;
     }
     
+    public function profil(){
+        $dataProfil = User::where('id', Auth::id())->get();
+        return view('user.pengolah.profile',[
+            'title' => 'Profil',
+            $dataProfil
+        ]);
+    }
  }
   
   

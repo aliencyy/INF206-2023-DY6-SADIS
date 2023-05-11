@@ -48,10 +48,9 @@
                     </a>
                   </li>
                   <li class="breadcrumb-item">
-                    <a class="nav-home link-body-emphasis fw-semibold text-decoration-none" href="#">{{ $title }}</a>
+                    <a class="nav-home link-body-emphasis fw-semibold text-decoration-none me-2" href="#">{{ $title }}</a>
                   </li>
-                  <li class="breadcrumb-item active me-4" aria-current="page">
-                  </li>
+                  
                 </ol>
               </nav>
             </div>
@@ -70,7 +69,7 @@
                         <i class="fas fa-user me-2"></i>ADMIN
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="/profil">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><a class="dropdown-item" href="/logout">Logout</a></li>
                     </ul>
