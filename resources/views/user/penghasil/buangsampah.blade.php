@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('body')
-style="background-color: #D9F9EE"
 @endsection
 
 @section('content')
@@ -19,7 +18,7 @@ style="background-color: #D9F9EE"
                         Formulir Keterangan Sampah
                     </h2>
                 </div>
-                <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md rounded-5" style="background-color: #D3ECE0 ; border-radius: 1%; padding: 3%; margin:2%">
+                <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md rounded-5" style="background-color: #fbfefd ; border-radius: 1%; padding: 3%; margin:2%">
                      <div class=" py-8 px-4 rounded-5 sm:px-10">
                         
                         <div >

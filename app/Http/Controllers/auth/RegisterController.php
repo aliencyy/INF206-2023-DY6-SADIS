@@ -50,7 +50,7 @@
          $userid = ($id + 10000000);
          # Jika EMAIL sudah ada yang punya maka kita harus mencegahnya agar tidak bisa register
          if(DB::table('users')->where('email', $request->email)->exists()){
-            Alert::error('Error', 'NPM udah ada yang punya oi');
+            Alert::error('Error', 'Email sudah ada');
              return redirect('/register');
          }
   
@@ -64,8 +64,8 @@
              'password' => Hash::make($request->password),
          ]);
   
-  
-         return redirect('/login')->with('success', 'berhasil registrasi');
+         // example:
+         return redirect('/login');
   
      }
   
@@ -100,6 +100,10 @@
      {
          //
      }
+
+
+
+
  }
   
   

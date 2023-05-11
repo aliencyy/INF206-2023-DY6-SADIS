@@ -1,8 +1,12 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    font-size: larger;
-  }
+.form-bayar input[type=text],
+.form-bayar input[type=radio],
+.form-bayar input[type=submit],
+.form-bayar label {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+
+}
+
   
   form {
     background-color: #BFE4D3;

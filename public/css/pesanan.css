@@ -1,0 +1,70 @@
+form {
+    background-color: #BFE4D3;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: center;
+  }
+  
+  
+  
+  
+  
+  
+  input[type="submit"] {
+    background-color: #A3D8BF;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 97%;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #83D8BF;
+  }
+  
+  
+  
+  
+  /* card */
+  .invoice1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .invoice-header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .invoice-header1 h2 {
+    margin: 0;
+  }
+   .card1 {
+    
+        padding: 10px;
+        width: 300px;
+      }
+      .card1 h2 {
+        font-size: 24px;
+      }
+      .card1 pre {
+        font-size: 20px;
+      }
+  
+  
+  .invoice-total1 {
+    text-align: right;
+  }
+  .invoice-footer1 {
+    text-align: center;
+  }
+  .invoice-footer1 pre{
+    padding-top: 10px;
+    font-size: larger;
+  }
+  /* end card */
