@@ -72,9 +72,9 @@
     @include('sweetalert::alert')
 
     <!-- Menu Daftar -->
-    <div class="daftar">
+    <div class="daftar modal-content rounded-4 shadow border-0" style="background-color: #FDFEF3">
 
-        <h1 class="text-center">Menu Daftar</h1>
+        <h1 class="text-center fw-bolder">Menu Daftar</h1>
 
         <form class="needs-validation" action="/register" method="POST">
             @csrf
