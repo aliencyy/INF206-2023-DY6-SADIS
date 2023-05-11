@@ -108,7 +108,7 @@
                 <input class="form-check-input" type="checkbox" id="check">
                 <label class="form-check-label" for="check">Ingat saya</label>
             </div>
-            <input class="btn btn-primary w-100 border-0" type="submit" value="Masuk" style="margin-bottom: 20px;">
+            <input class="btn btn-primary w-100 border-0" type="submit" value="Masuk">
         </form>
         <button class=" btn btn-primary w-100 border-0" onclick="location.href='/register'">Buat Akun</button>
     </div>
