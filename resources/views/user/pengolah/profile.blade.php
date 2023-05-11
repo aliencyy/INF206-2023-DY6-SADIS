@@ -20,7 +20,7 @@
               <!-- Start Nama Instansi User Name Penghasil-->
               <div class="text-center">
                 <div class="object-fit-md-contain ">
-                  <img src="img/icon-penghasil.png" class="border rounded" alt="Rumah Sakit Sehat" width="200">
+                  {{-- <img src="img/icon-penghasil.png" class="border rounded" alt="Rumah Sakit Sehat" width="200"> --}}
                 </div>
                 <h2 class="fs-3 fw-border mt-4">Rumah Sakit Sehat</h2>
               </div>
@@ -29,6 +29,15 @@
               
   
                 <div class="container overflow-hidden mt-4 text-start">
+
+                  <div class="row">
+                    <div class="col-3">
+                    <div class="p-2" style="font-size: 16px">Id Akun</div>
+                    </div>
+                    <div class="col">
+                      <div class="p-2" style="font-size: 16px">nama</div>
+                    </div>
+                </div>
                   
                   <!-- Start Email User penghasil -->
                   <div class="row">
@@ -51,6 +60,8 @@
                       </div>
                   </div>
                   <!-- End Lokasi User Penghasil -->
+
+                  
                 </div>
                 <!-- END ISIAN -->
               </div>
