@@ -28,19 +28,19 @@
 <!-- End Navbar --> --}}
 
 <!-- Content -->
-<div class="container w-80 p-3 rounded-4" style="background-color: #fbfefd; height: 400px; margin-top: 150px;">
+<div class="container w-80 p-3 rounded-4" style="background-color: #f9eed9; height: 400px; margin-top: 150px;">
     <div class="row">
         {{-- <div class="col m-5 fs-5">Jenis Langganan
             <span class="ms-4"><input type="text" placeholder="bulanan"></span>
         </div> --}}
 
-        <div class="col m-5 fs-5">Status
+        <div class="col m-5 fs-5"><b>Status</b>
             <span class="ms-4">
                 <label for="Status langganan">: {{ $status }}</label>
             </span>
         </div>
 
-        <div class="col m-5 fs-5">Tanggal Jatuh Tempo
+        <div class="col m-5 fs-5"><b>Tanggal Jatuh Tempo</b>
             <span class="ms-4">
                 <label for="tanggal-akhir" class="font-size: 16px;">{{ $tanggal }} </label>
             </span>
