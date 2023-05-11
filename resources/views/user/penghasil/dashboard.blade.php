@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
 @can('user')
       <!-- Isi dashboard penghasil -->

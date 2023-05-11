@@ -10,10 +10,10 @@
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Sedang dalam Proses</a>
+                <a class="nav-link " href="/order">Sedang dalam Proses</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/listdone">Selesai diolah</a>
+                <a class="nav-link active" href="#">Selesai diolah</a>
               </li>
     
             </ul>
@@ -35,7 +35,7 @@
                         </thead>
                         <tbody>
                             @foreach ($trash as $d)
-                                @if ($d->status_pengolahan != 'Selesai')
+                                @if ($d->status_pengolahan == 'Selesai')
                                 <tr>
                                     <td onclick="location.href='/order/{{ $d->id }}'">{{ $loop->iteration }}</td>
                                     <td onclick="location.href='/order/{{ $d->id }}'">{{ $d->user->email ?? 'No user associated' }}</td>
@@ -43,7 +43,7 @@
                                     <td onclick="location.href='/order/{{ $d->id }}'" style="width: 25%" class="border-0">{{ $d->status_pengolahan }}</td>
                                     <td class="p-0" style="width: 0%;">
                                         <div class="position-relative ">
-                                            <button class="btn btn-primary btn-block" id="dropdown-btn-{{ $loop->iteration }}">ubah</button>
+                                            <button class="btn btn-primary btn-block" id="dropdown-btn-{{ $loop->iteration }}" disabled>ubah</button>
                                             <ul class="dropdown-menu position-absolute d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px d-none" id="dropdown-menu-{{ $loop->iteration }}" data-bs-theme="light"">
                                                 <form action="/updateStatus" method="POST" id="form-{{ $loop->iteration }}">
                                                     @csrf
@@ -57,7 +57,7 @@
                                             </ul>
                                         </div>
                                     </td>
-                                </tr> 
+                                </tr>
                                 @endif
 
                             @endforeach
@@ -132,14 +132,14 @@
 
                 <tbody>
                     @foreach ($trash as $d)
-                    @if ($d->status_pengolahan != 'Selesai')
+                    @if ($d->status_pengolahan == 'Selesai')
                     <tr onclick="location.href='/order/{{ $d->id }}'">
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $d->tanggal_pengambilan }}</td>
                         <td>{{ $d->status_pengolahan }}</td>
                     </tr>
                     @endif
-
+                        
                     @endforeach
                 </tbody>
             </table>

@@ -17,7 +17,7 @@
              $table->id();
              $table->string('jenis_sampah')->nullable();
              $table->unsignedBigInteger('user_id');
-             $table->string('status_pengolahan')->nullable();
+             $table->string('status_pengolahan')->default('Pengangkutan');
              $table->string('jenis_pengolahan')->nullable();
              $table->string('berat')->nullable();
              $table->string('ket')->nullable();
