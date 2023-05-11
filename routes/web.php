@@ -78,6 +78,13 @@ Route::get('/profile', function() {
     return view('user.pengolah.profile');
 });
 
+Route::get('/aboutus', function() {
+    return view('aboutus', [
+        "title" => "About Us"
+    ]);
+});
+
+
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/buangsampah', [PagesController::class, 'storeBuang'])->middleware('overdue');
