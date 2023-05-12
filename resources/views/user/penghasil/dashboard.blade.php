@@ -13,20 +13,20 @@
     <div class="panel panel-default position-relative" style="border-radius: 30px;">
         <div class="panel-body p-5 rounded-6" style="background-color: #BFE4D3; border-radius: 10px;">
             <div class="align-middle text-center">
-                <h3>Pengolah Limbah B3 Aceh</h3>
+                <h3><b>PENGOLAH LIMBAH SAMPAH B3 ACEH</b></h3>
 
                 <!-- Area button under Pengolah Limbah B3 Aceh-->
                 <div class="container text-center">
                     <div class="row align-items-center p-4">
                         <!-- Button Orderan -->
                         <button type="button" class="col p-3 mx-3 rounded-6 border-0 shadow" style="background-color: #A3D8BF; border-radius: 10px; ">
-                            <a href="/buangsampah" class="text-decoration-none" style="color: black; font-size: 18px;">Buat Pengajuan pengambilan sampah</a></button>
+                            <a href="/buangsampah" class="text-decoration-none" style="color: black; font-size: 18px;">Buat pengajuan pengambilan sampah</a></button>
                         <!-- Button Daftar pelanggan-->
                         <button type="button" class="col p-3 mx-3 rounded-6 border-0 shadow" style="background-color: #A3D8BF; border-radius: 10px;">
                             <a href="/order" class="text-decoration-none" style="color: black; font-size: 18px;">Riwayat pembuangan sampah</a></button>
                         <!-- Button Subscription-->
                         <button type="button" class="col p-3 mx-3 rounded-6 border-0 shadow" style="background-color: #A3D8BF; border-radius: 10px;">
-                            <a href="/langganan" class="text-decoration-none" style="color: black; font-size: 18px;">Subscription</a></button>
+                            <a href="/langganan" class="text-decoration-none" style="color: black; font-size: 18px;">Berlangganan</a></button>
                     </div>
                 </div>
                 <!-- END Area button Pengolah Limbah-->
@@ -65,7 +65,7 @@
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
               <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah radioaktif'] }} unit</text>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 12;">{{ $trashCounts['Limbah radioaktif'] }} unit</text>
             </svg>
             <div class="author-name">
               <div class="author-name-prefix">Jumlah sampah yang telah dibuang</div>
@@ -165,23 +165,23 @@
             <div class="panel-body p-5 rounded-6" style="background-color: #BFE4D3; border-radius: 10px;">
                 <div class="align-middle text-center"><h3>Pengolah Limbah B3 Aceh</h3>
 
-<div class="container p-5" style="margin-top: 200px;">
-    <div class="panel panel-default position-relative" style="border-radius: 30px;">
-        <div class="panel-body p-5 rounded-6" style="background-color: #BFE4D3; border-radius: 10px;">
+<div class="container p-5 mt-3">
+    <div class="panel panel-default" style="border-radius: 30px;">
+        <div class="panel-body p-5" style="background-color: #BFE4D3; border-radius: 10px; margin-top: 150px;">
             <div class="align-middle text-center">
-                <h3>Pengolah Limbah B3 Aceh</h3>
+                <h3><b>PENGOLAH LIMBAH SAMPAH B3 ACEH</b></h3>
 
                 <div class="container text-center">
                     <div class="row align-items-center p-4">
                         <!-- Button Orderan -->
-                        <button type="button" class="col p-3 mx-3 rounded-6 border-0" style="background-color: #A3D8BF; border-radius: 10px; ">
-                            <a href="/order" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black; font-size: 18px;">Orderan</a></button>
+                        <button type="button" class="col p-3 mx-3 rounded-6 border-0 shadow" style="background-color: #A3D8BF; border-radius: 10px; ">
+                            <a href="/order" class="text-decoration-none" style="color: black; font-size: 18px;">Orderan</a></button>
                         <!-- Button Daftar Pembayaran-->
-                        <button type="button" class="col p-3 mx-3 rounded-6 border-0" style="background-color: #A3D8BF; border-radius: 10px;">
-                            <a href="/listPembayaran" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black; font-size: 18px;">Daftar Pembayaran</a></button>
+                        <button type="button" class="col p-3 mx-3 rounded-6 border-0 shadow" style="background-color: #A3D8BF; border-radius: 10px;">
+                            <a href="/listPembayaran" class="text-decoration-none" style="color: black; font-size: 18px;">Daftar Pembayaran</a></button>
                         <!-- Button Daftar Pelanggan -->
-                        <button type="button" class="col p-3 mx-3 rounded-6 border-0" style="background-color: #A3D8BF; border-radius: 10px;">
-                            <a href="/listSubscriptor" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black; font-size: 18px;">Daftar Pelanggan</a></button>
+                        <button type="button" class="col p-3 mx-3 rounded-6 border-0 shadow" style="background-color: #A3D8BF; border-radius: 10px;">
+                            <a href="/listSubscriptor" class="text-decoration-none" style="color: black; font-size: 18px;">Daftar Pelanggan</a></button>
                     </div>
                 </div>
                 <!-- END Area button Pengolah Limbah-->
