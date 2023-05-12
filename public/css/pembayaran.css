@@ -9,7 +9,7 @@
 
   
   form {
-    background-color: #f9eed9;
+    background-color: #FDFEF3;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -34,7 +34,7 @@
     border: black solid 1px;
     margin-bottom: 20px;
     width: 100%;
-    background-color: #f0eed9;
+    background-color: #EBF6F1;
   }
   
   .select-payment {
@@ -53,17 +53,11 @@
   }
   
   input[type="submit"] {
-    background-color: #ff8a00;
-    color: black;
-    border: none;
+    background-color: #FDFEF3;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #c46800;
   }
   
   .inputan {

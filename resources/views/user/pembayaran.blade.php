@@ -38,16 +38,16 @@
           </label>
           <div class="mt-1 md-form md-outline input-with-post-icon datepicker" inline="true">
               <input id="expirations" name="expirations" type="month" required class="form-control"
-              placeholder="" style="background-color: #f0eed9;" min="{{ date('Y-m') }}">
+              placeholder="" style="background-color: #EBF6F1;" min="{{ date('Y-m') }}">
           </div>
       </div>
         <div style="padding-left: 205px">
-          <label for="number">CVV</label>
+          <label for="number"><b>CVV</b></label>
           <input class="anu" type="text" id="CVV" name="CVV" required pattern="^\d{3}$"  />
         </div>
       </div>
 
-      <input class="btn-primary" type="submit" value="Continue to checkout" style=" font-size: 20px" />
+      <input class="btn btn-outline-primary rounded btn-lg" type="submit" value="Continue to checkout" style=" font-size: 20px" />
     </form>
   </div>
 
