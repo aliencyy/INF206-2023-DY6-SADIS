@@ -6,7 +6,14 @@
 
 
 
+
     <div class="card w-75 mx-auto text-center">
+
+        <div class="sm:mx-auto sm:w-full sm:max-w-md rounded-5">
+            <h2 class=" my-3 mt-6 text-center text-3xl fw-bold">
+                Riwayat Pengelolaan Sampah
+            </h2>
+        </div>
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item">
@@ -122,7 +129,9 @@
 
             @can('user')
         
+            
             <div>
+                
             <table class="table table-sm table-bordered table-striped table-hover">
                 <thead>
                     <th>No</th>

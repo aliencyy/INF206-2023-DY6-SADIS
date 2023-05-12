@@ -5,6 +5,11 @@
 <link rel="stylesheet" href="{{ asset('css/order.css') }}">
 
 <div class="card w-75 mx-auto text-center">
+    <div class="sm:mx-auto sm:w-full sm:max-w-md rounded-5">
+        <h2 class=" my-3 mt-6 text-center text-3xl fw-bold">
+            Pembayaran Baru
+        </h2>
+    </div>
     <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs">
           <li class="nav-item">
@@ -37,7 +42,7 @@
                             <td>{{ $d->receipt_id }}</td>
                             <td>{{ $d->user->email ?? 'No user associated' }}</td>
                             <td>{{ $d->created_at }}</td>
-                            <td style="width: 25%" class="border-0">{{ $d->status_pengolahan }}</td>
+                            <td style="width: 25%" class="border-0"></td>
                             <td class="p-0 border-0" style="width: 0%;">
                                 <div class="position-relative ">
                                     <form action="/konfirmasiPembayaran" method="POST" id="form-{{ $loop->iteration }}">

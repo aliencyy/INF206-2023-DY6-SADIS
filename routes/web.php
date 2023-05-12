@@ -39,6 +39,7 @@ Route::get('/profil', [PagesController::class, 'profil'])->middleware('auth');
 Route::post('/buangsampah', [PagesController::class, 'storeBuang'])->middleware('overdue');
 Route::resource('/dashboard/tes', IsAdminController::class)->middleware(('admin'));
 Route::post('/updateStatus', [PagesController::class, 'storeStatus']);
+Route::post('/hapusAkun', [PagesController::class, 'hapusAkun']);
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
@@ -70,13 +71,22 @@ Route::get('/tes/data', [PagesController::class, 'countTrash']);
 
 
 Route::get('/mitra', function() {
-    return view('mitra');
+    return view('mitra', [
+        "title" => "Mitra"
+    ]);
 });
 
 
 Route::get('/profile', function() {
     return view('user.pengolah.profile');
 });
+
+Route::get('/aboutus', function() {
+    return view('aboutus', [
+        "title" => "About Us"
+    ]);
+});
+
 
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login']);
