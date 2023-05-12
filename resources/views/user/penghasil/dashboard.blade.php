@@ -48,7 +48,7 @@
               <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah infeksius'] }} unit</text>
             </svg>
             <div class="author-name">
-              <div class="author-name-prefix">Jumlah sampah yang telah dibuang</div>
+              <div class="author-name-prefix">Jumlah sampah infeksius yang telah dibuang</div>
               
             </div>
           </div>
@@ -68,7 +68,7 @@
               <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 12;">{{ $trashCounts['Limbah radioaktif'] }} unit</text>
             </svg>
             <div class="author-name">
-              <div class="author-name-prefix">Jumlah sampah yang telah dibuang</div>
+              <div class="author-name-prefix">Jumlah sampah Radioaktif yang telah dibuang</div>
               
             </div>
           </div>
@@ -89,7 +89,7 @@
               <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah sitotoksik'] }} unit</text>
             </svg>
             <div class="author-name">
-              <div class="author-name-prefix">Jumlah sampah yang telah dibuang</div>
+              <div class="author-name-prefix">Jumlah sampah Sitotoksik yang telah dibuang</div>
               
             </div>
           </div>
@@ -107,7 +107,7 @@
               <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah kimia'] }} unit</text>
             </svg>
             <div class="author-name">
-              <div class="author-name-prefix">Jumlah sampah yang telah dibuang</div>
+              <div class="author-name-prefix">Jumlah sampah Kimia yang telah dibuang</div>
               
             </div>
           </div>
@@ -125,7 +125,7 @@
               <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah Farmasi'] }} unit</text>
             </svg>
             <div class="author-name">
-              <div class="author-name-prefix">Jumlah sampah yang telah dibuang</div>
+              <div class="author-name-prefix">Jumlah sampah Farmasi yang telah dibuang</div>
               
             </div>
           </div>
@@ -143,7 +143,7 @@
               <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah benda tajam'] }} unit</text>
             </svg>
             <div class="author-name">
-              <div class="author-name-prefix">Jumlah sampah yang telah dibuang</div>
+              <div class="author-name-prefix">Jumlah sampah Benda Tajam yang telah dibuang</div>
               
             </div>
           </div>
