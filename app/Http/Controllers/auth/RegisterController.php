@@ -50,7 +50,7 @@
          $userid = ($id + 10000000);
          # Jika EMAIL sudah ada yang punya maka kita harus mencegahnya agar tidak bisa register
          if(DB::table('users')->where('email', $request->email)->exists()){
-            Alert::error('Error', 'Email sudah ada');
+            Alert::error('Error', 'Email sudah Terpakai');
              return redirect('/register');
          }
   
