@@ -14,11 +14,11 @@
             @csrf
             <div class="mx-auto">
                 <div class="sm:mx-auto sm:w-full sm:max-w-md rounded-5">
-                    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                    <h2 class="mt-6 text-center text-3xl fw-bold text-gray-900">
                         Formulir Keterangan Sampah
                     </h2>
                 </div>
-                <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md rounded-5" style="background-color: #fbfefd ; border-radius: 1%; padding: 3%; margin:2%">
+                <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md rounded-3 shadow" style="background-color: #F8FEF3; border-radius: 1%; padding: 3%; margin:2%">
                      <div class=" py-8 px-4 rounded-5 sm:px-10">
                         
                         <div >
@@ -28,7 +28,7 @@
                             <div class="mt-1 md-form md-outline input-with-post-icon datepicker" inline="true">
                                 <input id="tanggal_pengamb" name="tanggal_pengambilan" type="date" required class="form-control"
                                 placeholder="Silahkan masukkan email anda" style="background-color: #EBF6F1;">
-                                <i class="fas fa-calendar input-prefix"></i>
+
                             </div>
                         </div>
 

@@ -86,7 +86,7 @@
     <!-- Menu Daftar -->
     <div class="daftar modal-content rounded-4 shadow border-0" style="background-color: #FDFEF3">
 
-        <h1 class="text-center fw-bolder">Menu Masuk</h1>
+        <h1 class="text-center fw-bolder" style="color: #698269;">Menu Masuk</h1>
 
         @if (session('Information'))
             <div class="alert alert-success">
