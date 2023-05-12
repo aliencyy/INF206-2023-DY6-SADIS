@@ -83,7 +83,7 @@
             </div>
             <div class="form-group was-validated">
                 <label class="form-label" for="email">Email instansi</label>
-                <input class="form-control" name="email" placeholder="Masukkan email instansi kesehatan" required>
+                <input class="form-control" name="email" placeholder="Masukkan email instansi kesehatan" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             </div>
             <div class="form-group was-validated">
                 <label class="form-label" for="lokasi">Lokasi Instasi</label>
@@ -91,7 +91,10 @@
             </div>
             <div class="form-group was-validated">
                 <label class="form-label" for="password">Password</label>
-                <input class="form-control" type="password" name="password" placeholder="Masukkan password" required>
+                <input class="form-control" type="password" name="password" placeholder="Masukkan password" required minlength="8">
+                <div class="invalid-feedback">
+                    Password harus memiliki minimal 8 karakter.
+                </div>
             </div>
             {{-- <div class="form-group was-validated">
                 <label class="form-label" for="password">Konfirmasi Password</label>

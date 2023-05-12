@@ -32,27 +32,12 @@
                             </div>
                         </div>
 
-
-
-                {{-- <div>
-                    <label for="nama" class="form-label"> Nama Instansi</label>
-                    <div class="mt-1">
-                        <input id="nama" name="nama"
-                            class="form-control"
-                            placeholder="Masukkan Instansi Anda" style="background-color: #EBF6F1;">
-                    </div>
-                </div> --}}
-
-    
-
-
-
                 <div>
 
                     <div class="mt-1">
                             <label class="my-1 mr-2" for="jenis_sampah">Jenis Sampah</label>
                             <select class="form-select my-1 mr-sm-2" id="jenis_sampah" name="jenis_sampah" style="background-color: #EBF6F1;">
-                              <option selected >Pilih Jenis Sampah</option>
+                              <option disabled selected value="" >Pilih Jenis Sampah</option>
                               <option value="Limbah infeksius">Infeksius</option>
                               <option value="Limbah radioaktif">Radioaktif</option>
                               <option value="Limbah benda tajam">Benda Tajam</option>
@@ -68,7 +53,7 @@
                     <div class="mt-1">
                             <label class="my-1 mr-2" for="jenis_pengolahan">Metode Pengolahan</label>
                             <select class="form-select my-1 mr-sm-2 " id="jenis_pengolahan" name="jenis_pengolahan" aria-label="Default select example" style="background-color: #EBF6F1;">
-                              <option selected>Pilih Metode Pengolahan Sampah</option>
+                              <option disabled selected value="">Pilih Metode Pengolahan Sampah</option>
                               <option value="Insinerator">Insinerator</option>
                               <option value="autoclaving">Autoclaving</option>
                               <option value="disinfeksi kimia">Disinfeksi Kimia</option>
@@ -78,16 +63,29 @@
                     </div>
                 </div>
 
-
-            
+                <div class="mt-1">
+                    <label class="my-1 mr-2" for="berat">Weight:</label>
+                    <select class="form-select my-1 mr-sm-2 " id="berat" name="berat" aria-label="Default select example" style="background-color: #EBF6F1;">
+                        <option disabled selected value="">Select weight</option>
+                        <?php
+                        for($i=1; $i<=100; $i++){
+                          echo "<option value='".$i."'>".$i." kg</option>";
+                        }
+                      ?>
+                        <!-- Add more options as needed -->
+                    </select>
+                    
+                  </div>
+                  
+                  
 
                     
-                {{-- <div class="form-floating">
-                    <label for="keterangan" class="block text-sm font-medium text-gray-700">
+                <div class="mt-1">
+                    <label for="keterangan" class="block text-sm font-medium my-1 mr-2">
                         Keterangan Tambahan
                     </label>
-                    <textarea class="form-control" id="keterangan" rows="3" style="background-color: #EBF6F1;"></textarea>
-                </div> --}}
+                    <textarea class="form-control" id="ket" name="ket" rows="3" style="background-color: #EBF6F1;"></textarea>
+                </div>
 
 
             
@@ -95,19 +93,9 @@
 
                 <!-- make button for login -->
                 <div class="p-2 mt-3">
-                    <button type="submit"
-                        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                        <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-                            
-                            <!-- Heroicon name: solid/lock-closed -->
-                            <svg class="h-5 w-5 text-blue-500 group-hover:text-blue-400"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M5 8a3 3 0 016 0v1h1a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2h1V8zm3 0V7a1 1 0 10-2 0v1H5a1 1 0 00-1 1v5a1 1 0 001 1h10a1 1 0 001-1v-5a1 1 0 00-1-1h-4z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </span>
+                    <button type="submit" id="submit-btn"
+                        class="group relative w-full flex justify-center py-2 px-4 rounded border border-transparent text-sm font-medium rounded-md text-black bg-primary hover:bg-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        
                         Submit
                     </button>
                 </div>
@@ -119,9 +107,23 @@
 <!-- This is the login form -->
 
 <script>// Data Picker Initialization
+
 $('.datepicker').datepicker({
 inline: true
-});</script>
+});
+
+function checkWeight() {
+    var weightDropdown = document.getElementById("weight-dropdown");
+    if (weightDropdown.value === "Berat") {
+        // If no weight option is selected, disable the submit button
+        document.getElementById("submit-btn").disabled = true;
+    } else {
+        // If a weight option is selected, enable the submit button
+        document.getElementById("submit-btn").disabled = false;
+    }
+}
+
+</script>
 
 </div>
      

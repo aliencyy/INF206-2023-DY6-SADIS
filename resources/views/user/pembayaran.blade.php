@@ -43,7 +43,7 @@
       </div>
         <div style="padding-left: 205px">
           <label for="number">CVV</label>
-          <input class="anu" type="text" id="CVV" name="CVV" required pattern="^\d{3}$" />
+          <input class="anu" type="text" id="CVV" name="CVV" required pattern="^\d{3}$"  />
         </div>
       </div>
 

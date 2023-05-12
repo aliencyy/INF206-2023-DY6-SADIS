@@ -47,6 +47,7 @@ use Exception;
             'tanggal_pengambilan' => 'required',
             'jenis_sampah' => 'required',
             'jenis_pengolahan' => 'required',
+            'berat' => 'required',
         ]);
 
         $id = DB::table('trashes')->max('id');
@@ -58,6 +59,8 @@ use Exception;
             'tanggal_pengambilan' => $request->tanggal_pengambilan,
             'jenis_sampah' => $request->jenis_sampah,
             'jenis_pengolahan' => $request->jenis_pengolahan,
+            'berat' => $request->berat,
+            'ket' => $request->ket,
             'user_id' => Auth::user()->id,
         ]);
 
@@ -120,18 +123,21 @@ use Exception;
      }
 
     public function langganan(){
-        
+        $dataProfil = User::where('id', Auth::id())->get();
+        $name = $dataProfil[0]->name;
+
         try{
             $data = DB::table('subscriptions')->select('langganan')->where('user_id', '=', Auth::user()->id)->first();
             $status = 'aktif';
         $tanggal = $data->langganan;
         } catch(Exception $e) {
             $status = 'Tidak aktif';
-            $tanggal = '';
+            $tanggal = 'belum Pernah berlangganan';
         }
         
         return view('user.penghasil.statusSubcription', [
             'title' => 'Langganan',
+            'nama' => $name,
             'status' => $status,
             'tanggal' => $tanggal
         ]);
@@ -218,8 +224,21 @@ use Exception;
         $dataProfil = User::where('id', Auth::id())->get();
         return view('user.pengolah.profile',[
             'title' => 'Profil',
-            $dataProfil
+            'nama' => $dataProfil[0]->name,
+            'id' => $dataProfil[0]->Id_akun,
+            'email' => $dataProfil[0]->email,
+            'lokasi' => $dataProfil[0]->lokasi,
         ]);
+    }
+
+    public function hapusAkun(Request $request ){
+        $email = $request->input('email');
+        $user = User::where('email', $email)->first();
+    
+            $user->delete();
+            Alert::success('Berhasil','User dengan email '.$email.' berhasil dihapus');
+         
+        return redirect('listSubscriptor');
     }
  }
   

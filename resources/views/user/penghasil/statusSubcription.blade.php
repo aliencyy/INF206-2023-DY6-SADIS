@@ -5,67 +5,128 @@
 
 @section('content')
 
-<!-- Status Langganan Pengolah -->
+<!-- Untuk penghasil START-->
 
-{{-- <!-- Navbar -->
-<nav class="navbar m-0 p-0 fixed-top">
-    <!-- Left Navbar -->
-    <div class="container-fluid" style="background-color: #A3D8BF;">
-        <a class="navbar-brand ms-3">
-            <img src="src/logo_sadis.png" alt="SADIS" width="102" height="95">
-            <span class="fs-2 fw-bold" style="color: #0E8DC9; margin: 15px; font-family: 'Inter', sans-serif;">SADIS</span>
-        </a>
-
-        <!-- Right navbar -->
-        <div class="me-3">
-            <a href="" class="mx-3 fs-4 text-dark text-decoration-none">Subscription</a>
-            <a href="" class="mx-3 fs-4 text-dark text-decoration-none">Dashboard</a>
-            <a href="" class="mx-3 fs-4 text-dark text-decoration-none">
-                <img src="src/logo_pengolah.png" alt="logo_pengolah" width="50">
-                User</a>
+<div class="modal position-static d-block py-5">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4 shadow border-0 mb-2" style="background-color: #FDFEF3">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+          <h1 class="fw-bolder mb-0 fs-1">Membership</h1>
         </div>
-</nav>
-<!-- End Navbar --> --}}
-
-<!-- Content -->
-<div class="container w-80 p-3 rounded-4" style="background-color: #f9eed9; height: 400px; margin-top: 150px;">
-    <div class="row">
-        {{-- <div class="col m-5 fs-5">Jenis Langganan
-            <span class="ms-4"><input type="text" placeholder="bulanan"></span>
-        </div> --}}
-
-        <div class="col m-5 fs-5"><b>Status</b>
-            <span class="ms-4">
-                <label for="Status langganan">: {{ $status }}</label>
-            </span>
-        </div>
-
-        <div class="col m-5 fs-5"><b>Tanggal Jatuh Tempo</b>
-            <span class="ms-4">
-                <label for="tanggal-akhir" class="font-size: 16px;">{{ $tanggal }} </label>
-            </span>
-            
-        </div>
-
-        {{-- <div class="col m-5 fs-5">Harga
-            <span class="ms-4"><input type="text"></span>
-        </div> --}}
-    </div>
-
-    <!-- Button -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="d-flex justify-content-end">
-                    <form action="/pricing" method="GET">
-                    <button class="btn rounded-4 me-3" style="background-color: #A3D8BF;">Perpanjang</button>
-                    </form>
-                    <button class="btn rounded-4 ml-auto me-5" style="background-color: rgba(250, 59, 59, 0.74);">Batalkan</button>
-                </div>
+        <!-- START Isi Form-->
+        <div class="modal-body p-5 pt-0">
+          <div class="mb-3">
+            <!-- Start Nama Instansi User Name Penghasil-->
+            <div class="text-center">
+              <div class="object-fit-md-contain ">
+                {{-- <img src="img/icon-penghasil.png" class="border rounded" alt="Rumah Sakit Sehat" width="200"> --}}
+              </div>
+              <h2 class="fs-3 fw-border mt-4">{{ $nama }}</h2>
             </div>
+            <!-- End Nama Instansi User Name Penghasil-->
+            <hr class="my-1">
+            <div class="container overflow-hidden mt-4 text-start">
+              <div class="row border-bottom">
+                <div class="col-3 ">
+                  <div class="p-2" style="font-size: 16px">Status Membership</div>
+                </div>
+                <div class="col ">
+                  <div class="p-4 ms-4" style="font-size: 16px">{{ $status }}</div>
+                </div>
+              </div>
+              <!-- Start Email User penghasil -->
+              <div class="row">
+                <div class="col-3">
+                  <div class="p-2" style="font-size: 16px">Tanggal habis Berlangganan</div>
+                </div>
+                <div class="col">
+                  <div class="p-4 ms-4" style="font-size: 16px">{{ $tanggal }}</div>
+                </div>
+              </div>
+              <!-- End Email User penghasil -->
+            </div>
+            <!-- END ISIAN -->
+            <div class="text-end mt-3">
+              <button class="btn btn-outline-primary rounded btn-lg">
+                <a href="/pricing" style="text-decoration: none; text: black;"><i class=""></i>Perbarui</a>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-
-</div>
+  </div>
+  
 
 @endsection
+
+
+
+
+<!-- UNtuk Penghasil END -->
+
+{{-- <!-- START Pengolah -->
+<div class="modal position-static d-block py-5">
+    <div class="modal-dialog" >
+      <div class="modal-content rounded-4 shadow border-0 mb-2" style="background-color: #FDFEF3">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+  
+          <h1 class="fw-bolder mb-0 fs-1">Profile</h1>
+        </div>
+  
+        <!-- START Isi Form-->
+        <div class="modal-body p-5 pt-0">
+  
+            <div class="mb-3">
+  
+              <!-- Start Nama Instansi User Name Pengolah-->
+  
+              <!-- Nama ADMIN User Name Pengolah-->
+              <div class="text-center">
+                <img src="img/icon-pengolah.jpg" class="object-fit-md-contain border rounded" alt="Rumah Sakit Sehat" width="200">
+                <h2 class="fs-3 fw-border mt-4">Admin</h2>
+              </div>
+  
+              <!-- End Nama Instansi User Name Pengolah-->
+  
+              <hr class="my-1">
+              
+  
+                <div class="container overflow-hidden mt-4 text-start">
+  
+                  <!-- Start Email User pengolah -->
+                  <div class="row">
+                      <div class="col-3">
+                          <div class="p-2" style="font-size: 16px">Email</div>
+                      </div>
+                      <div class="col">
+                          <div class="p-2" style="font-size: 16px">adminsadis@gmail.com</div>
+                      </div>
+                  </div>
+                  <!-- End Email User pengolah -->
+                  
+                  <!-- Start Lokasi User Penghasil -->
+                  <div class="row">
+                      <div class="col-3">
+                          <div class="p-2" style="font-size: 16px">Lokasi</div>
+                      </div>
+                      <div class="col">
+                          <div class="p-2" style="font-size: 16px">Banda Aceh, Jln. Topi No. 2</div>
+                      </div>
+                  </div>
+                  <!-- End Lokasi User Penghasil -->
+  
+                  <script src="js/bootstrap.bundle.min.js"></script>
+                </div>
+                <!-- END ISIAN -->
+              </div>
+  
+  
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- END Pengolah --> --}}
