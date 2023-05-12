@@ -33,7 +33,7 @@
              return redirect()->intended('/dashboard');
          }
          
-         Alert::error('Error', 'NPM atau Password salah');
+         Alert::error('Error', 'Email atau Password salah');
          return redirect('/login');
   
  }
