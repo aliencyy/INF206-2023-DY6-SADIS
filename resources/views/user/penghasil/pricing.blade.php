@@ -36,27 +36,48 @@ style="background-color: #D9F9EE"
         <!-- Button Langganan -->
         <form action="/bayar/tipe" method="POST">
             @csrf
-        <div class="col-md-12">
-            <div class="d-flex justify-content-center">
-                <button type="submit" name="duration" value="mingguan" class="btn mx-2 fs-5" style="background-color: #FFD595; width: 388px; height: 350px;">
-                    <h3>Mingguan</h3>
-                    <br>
-                    Rp. 1.000.000
-                </button>
-                <button type="submit" name="duration" value="bulanan" class="btn mx-2 fs-5" style="background-color: #FF4A4A; width: 388px; height: 350px;">
-                    <h3>Bulanan</h3>
-                    <br>
-                    Rp. 3.500.000
-                </button>
-                <button type="submit" name="duration" value="tahunan" class="btn mx-2 fs-5" style="background-color: #FFF84A; width: 388px; height: 350px;">
-                    <h3>Tahunan</h3>
-                    <br>
-                    Rp. 30.000.000
-                </button>
-            </div>
-        </div>
-        </form>
-    </div>
-</div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                      <h4 class="my-0 fw-normal">Mingguan</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">Rp 1<small class="text-body-secondary fw-light"> Juta</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        
+                      </ul>
+                      <button type="submit" name="duration" value="mingguan" class="w-100 btn btn-lg btn-outline-primary">Berlangganan</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                      <h4 class="my-0 fw-normal">Bulanan</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">Rp 3.5<small class="text-body-secondary fw-light"> Juta</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                      </ul>
+                      <button type="submit" name="duration" value="bulanan" class="w-100 btn btn-lg btn-outline-primary">Berlangganan</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary border-primary">
+                      <h4 class="my-0 fw-normal">Tahunan</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">RP 30<small class="text-body-secondary fw-light"> Juta</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                      </ul>
+                      <button type="submit" name="duration" value="tahunan" class="w-100 btn btn-lg btn-outline-primary">Berlangganan</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
 @endsection
+

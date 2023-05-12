@@ -67,11 +67,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle second-text fw-bold bg-white rounded-3" href="#" id="navbarDropdown"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user me-2"></i>
+                        <i class="fas fa-user me-2">{{"  ".Auth::user()->name }}</i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/profil">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        {{-- <li><a class="dropdown-item" href="#">Settings</a></li> --}}
                         <li><a class="dropdown-item" href="/logout">Logout</a></li>
                     </ul>
                 </li>

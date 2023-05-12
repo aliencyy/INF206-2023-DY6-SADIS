@@ -5,8 +5,13 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="sidebar" id="sidebar-wrapper">
-            <div class="sidebar-heading text-center py-4 my-1 primary-text fs-4 fw-bold text-uppercase border-bottom ">
-                <img src="{{ asset('img/Logo-SADIS.png') }}" alt="SADIS" width="30" class="start-0">  SADIS</div>
+            <div class="sidebar-heading d-flex align-items-center py-4 my-1 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                <img src="{{ asset('img/Logo-SADIS.png') }}" alt="SADIS" width="50" height="50" class="ms-4 me-2">
+                <div>
+                  SADIS
+                </div>
+              </div>
+              
             <div class="list-group list-group-flush my-3">
                 <a href="/dashboard" class="list-group-item list-group-item-action rounded-3 second-text fw-bold {{ ($title === "Dashboard") ? 'bg-secondary' : '' }}"><i
                     class="fas fa-house me-2"></i>Dashboard</a>
