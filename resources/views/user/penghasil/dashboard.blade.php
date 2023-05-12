@@ -65,10 +65,10 @@
         <div class="card-author" style="display: flex; justify-content: center;">
             <svg class="full-circle" viewBox="-15 -15 100 100">
               <circle style="fill: none; stroke: #ff8a00; stroke-width: 10;" cx="40" cy="40" r="40"></circle>
-              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 12;">{{ $trashCounts['Limbah radioaktif'] }} unit</text>
+              <text x="40" y="45 " text-anchor="middle" fill="#e52e71" style="font-size: 14;">{{ $trashCounts['Limbah radioaktif'] }} unit</text>
             </svg>
             <div class="author-name">
-              <div class="author-name-prefix">Jumlah sampah Radioaktif yang telah dibuang</div>
+              <div class="author-name-prefix ">Jumlah sampah Radioaktif yang telah dibuang</div>
               
             </div>
           </div>
