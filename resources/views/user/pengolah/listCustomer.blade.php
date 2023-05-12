@@ -12,8 +12,12 @@
 
 
 <div class="card w-75 mx-auto">
-
-
+    
+    <div class="sm:mx-auto sm:w-full sm:max-w-md rounded-5">
+        <h2 class=" my-3 mt-6 text-center text-3xl fw-bold">
+            Daftar User Berlangganan
+        </h2>
+    </div>
     <div class="card-body">
             <div class="table-responsive" >
                 <table class="table table-sm table-bordered table-striped table-hover ">
@@ -24,7 +28,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Lokasi</th>
                             <th scope="col">tanggal tenggat</th>
-                            {{-- <th scope="col" width="20%">Status</th> --}}
+                            <th></th>                        
                         </tr>
                     </thead>
                     <tbody>
@@ -35,7 +39,15 @@
                             <td>{{ $d->user->email ?? 'No user associated' }}</td>
                             <td>{{ $d->user->lokasi ?? 'No user associated' }}</td>
                             <td>{{ $d->langganan }}</td>
-                            {{-- <td>{{ $d-> ?? 'No user associated' }}</td> --}}
+                            <td class="" style="width: 0%;">
+                                <div class="position-relative ">
+                                    <form action="/hapusAkun" method="POST" id="form-{{ $loop->iteration }}">
+                                        @csrf
+                                        <input type="hidden" name="email" id="email-{{ $loop->iteration }}" value="{{ $d->email }}">
+                                        <button class="btn btn-danger btn-block" onclick="setStatus({{ $loop->iteration }}, '{{ $d->user->email }}')">Hapus</button>
+                                    </form>                                                            
+                                </div>
+                            </td>                        
                         </tr>
                         @endforeach
                     </tbody>
@@ -47,52 +59,18 @@
         
                 
                 
-                {{-- <script>
+                 <script>
                     const dropdownBtns = document.querySelectorAll('[id^="dropdown-btn-"]');
                     const dropdownMenus = document.querySelectorAll('[id^="dropdown-menu-"]');
                     
-                    dropdownBtns.forEach((btn, i) => {
-                        btn.addEventListener('click', () => {
-                            // hide all other dropdowns
-                            dropdownMenus.forEach((menu) => {
-                                if (menu !== dropdownMenus[i]) {
-                                    menu.classList.add('d-none');
-                                }
-                            });
-                            // toggle the clicked dropdown
-                            dropdownMenus[i].classList.toggle('d-none');
-                        });
-                    });
                 
-                    document.addEventListener('click', (event) => {
-                        let isClickInsideDropdown = false;
-                        dropdownMenus.forEach((menu) => {
-                            if (menu.contains(event.target)) {
-                                isClickInsideDropdown = true;
-                            }
-                        });
-                
-                        dropdownBtns.forEach((btn) => {
-                            if (btn.contains(event.target)) {
-                                isClickInsideDropdown = true;
-                            }
-                        });
-                
-                        if (!isClickInsideDropdown) {
-                            dropdownMenus.forEach((menu) => {
-                                menu.classList.add('d-none');
-                            });
-                        }
-                    });
-                
-                    function setStatus(iteration, email, status) {
+                    function setStatus(iteration, email, ) {
                         var form = document.getElementById('form-' + iteration);
-                        form.querySelector('#status-' + iteration).value = status;
                         form.querySelector('#email-' + iteration).value = email;
                         form.submit();
                     }
                 
-                </script> --}}
+                </script>
                 
     </div>
 </div>

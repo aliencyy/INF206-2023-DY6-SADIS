@@ -39,6 +39,7 @@ Route::get('/profil', [PagesController::class, 'profil'])->middleware('auth');
 Route::post('/buangsampah', [PagesController::class, 'storeBuang'])->middleware('overdue');
 Route::resource('/dashboard/tes', IsAdminController::class)->middleware(('admin'));
 Route::post('/updateStatus', [PagesController::class, 'storeStatus']);
+Route::post('/hapusAkun', [PagesController::class, 'hapusAkun']);
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);

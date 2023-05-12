@@ -9,7 +9,7 @@
         <div class="row m-1 p-4">
             
             <div class="col">
-                <div class="p-1 h1 text-primary text-center mx-auto display-inline-block">
+                <div class="p-1 h1 text-black text-center mx-auto display-inline-block">
                     <button class="d-flex btn-outline-primary rounded btn-sm">
                         <a href="/order" style="text-decoration: none;"><i class="fa-solid fa-backward me-2"></i>back</a>            
                     </button>

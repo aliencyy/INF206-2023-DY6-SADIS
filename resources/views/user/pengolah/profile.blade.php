@@ -22,7 +22,7 @@
                 <div class="object-fit-md-contain ">
                   {{-- <img src="img/icon-penghasil.png" class="border rounded" alt="Rumah Sakit Sehat" width="200"> --}}
                 </div>
-                <h2 class="fs-3 fw-border mt-4">Rumah Sakit Sehat</h2>
+                <h2 class="fs-3 fw-border mt-4">{{ $nama }}</h2>
               </div>
               <!-- End Nama Instansi User Name Penghasil-->
               <hr class="my-1">
@@ -35,7 +35,7 @@
                     <div class="p-2" style="font-size: 16px">Id Akun</div>
                     </div>
                     <div class="col">
-                      <div class="p-2" style="font-size: 16px">nama</div>
+                      <div class="p-2" style="font-size: 16px">{{ $id }}</div>
                     </div>
                 </div>
                   
@@ -45,7 +45,7 @@
                     <div class="p-2" style="font-size: 16px">Email</div>
                     </div>
                     <div class="col">
-                      <div class="p-2" style="font-size: 16px">rumahsakitsehat@gmail.com</div>
+                      <div class="p-2" style="font-size: 16px">{{ $email }}</div>
                     </div>
                 </div>
                 <!-- End Email User penghasil -->
@@ -56,7 +56,7 @@
                       <div class="p-2" style="font-size: 16px">Lokasi</div>
                       </div>
                       <div class="col">
-                        <div class="p-2" style="font-size: 16px">Banda Aceh, Jln. Topi No. 2</div>
+                        <div class="p-2" style="font-size: 16px">{{ $lokasi }}</div>
                       </div>
                   </div>
                   <!-- End Lokasi User Penghasil -->
